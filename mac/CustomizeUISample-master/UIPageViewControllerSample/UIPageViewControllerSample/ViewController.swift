@@ -269,7 +269,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         //Case3. 一番最後のpage番号のときの移動量
         } else if page == (PageSettings.pageScrollNavigationList.count - 1) {
             
-            self.scrollButtonOffsetX = Int(self.view.frame.size.width)
+            self.scrollButtonOffsetX = Int(self.view.frame.size.width) / 3 * (page - 2)
         }
         
         UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
