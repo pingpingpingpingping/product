@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B6F5581D093D900053E70F /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6F5571D093D900053E70F /* FirstTabViewController.swift */; };
 		DE68EA811CAF8E7A00F3ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68EA801CAF8E7A00F3ED17 /* AppDelegate.swift */; };
 		DE68EA831CAF8E7A00F3ED17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68EA821CAF8E7A00F3ED17 /* ViewController.swift */; };
 		DE68EA861CAF8E7A00F3ED17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE68EA841CAF8E7A00F3ED17 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13B6F5571D093D900053E70F /* FirstTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
 		DE68EA7D1CAF8E7900F3ED17 /* UIPageViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPageViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE68EA801CAF8E7A00F3ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE68EA821CAF8E7A00F3ED17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				DE68EAB51CB0051400F3ED17 /* FourthViewController.swift */,
 				DE68EAB71CB0052600F3ED17 /* FifthViewController.swift */,
 				DE68EAB91CB0053D00F3ED17 /* SixthViewController.swift */,
+				13B6F5571D093D900053E70F /* FirstTabViewController.swift */,
 			);
 			name = Contents;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B6F5581D093D900053E70F /* FirstTabViewController.swift in Sources */,
 				DE68EAB61CB0051400F3ED17 /* FourthViewController.swift in Sources */,
 				DE68EAB21CB0047500F3ED17 /* SecondViewController.swift in Sources */,
 				DE68EAB01CAFFE6000F3ED17 /* FirstViewController.swift in Sources */,

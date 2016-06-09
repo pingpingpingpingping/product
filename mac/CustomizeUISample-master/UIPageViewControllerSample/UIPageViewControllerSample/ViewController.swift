@@ -24,7 +24,8 @@ struct PageSettings {
         "🔖3番目",
         "🔖4番目",
         "🔖5番目",
-        "🔖6番目"
+        "🔖6番目",
+        "Tab"
     ]
     
     //UIPageViewControllerに配置するUIViewControllerクラスの名称
@@ -34,7 +35,8 @@ struct PageSettings {
         "ThirdViewController",
         "FourthViewController",
         "FifthViewController",
-        "SixthViewController"
+        "SixthViewController",
+        "FirstTabViewController"
     ]
     
     //UIPageViewControllerに追加するViewControllerのリストを生成する

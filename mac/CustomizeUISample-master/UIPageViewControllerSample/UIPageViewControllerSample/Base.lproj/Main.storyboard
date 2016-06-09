@@ -58,6 +58,62 @@
             </objects>
             <point key="canvasLocation" x="970" y="106"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="8xr-mn-rZw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXs-ya-D7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Bcz-YX-nI2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cwS-6J-xJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBv-76-BVd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uRA-f3-ov3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="GNR-0H-V1T"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1802" y="-233"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="OMy-z0-hoh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5h3-PK-Bkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="PHh-IZ-8xE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3de-2f-81h"/>
+                        <viewControllerLayoutGuide type="bottom" id="M8p-AP-SUQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="meA-ZG-6GS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="TYL-MI-vQp"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1802" y="-893"/>
+        </scene>
+        <!--First Tab View Controller-->
+        <scene sceneID="tIc-sj-5j3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F06-E1-dSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="gTn-uQ-a4a" customClass="FirstTabViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SBu-PX-TID">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PHh-IZ-8xE" kind="relationship" relationship="viewControllers" id="Zwm-Pr-eoj"/>
+                        <segue destination="Bcz-YX-nI2" kind="relationship" relationship="viewControllers" id="VNk-4T-kLG"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="982" y="-561"/>
+        </scene>
         <!--Second View Controller-->
         <scene sceneID="OuT-Nx-tma">
             <objects>
@@ -91,14 +147,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fH-ae-ZVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="780"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="QA4-hz-xL8">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="CtN-cK-Ydg" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qDb-Ay-vJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900" y="879"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="UIo-ir-5Yq">
