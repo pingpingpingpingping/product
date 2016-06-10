@@ -12,7 +12,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     
     @IBOutlet var table:UITableView!
     
-    let imgArray: NSArray = ["char.png","char2.png","char3.png","enemy.png"]
+    let imgArray: NSArray = ["120120.png","120120.png","120120.png","120120.png",]
     
     let label2Array: NSArray = ["2013/8/23/16:04","2013/8/23/16:15","2013/8/23/16:47","2013/8/23/17:10"]
     

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -92,6 +93,7 @@
         <!--Sub View Controller-->
         <scene sceneID="GQZ-Z0-KeG">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otG-R2-bXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ubM-2t-AG5" customClass="subViewController" customModule="simpleTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tku-Ql-WSd"/>
@@ -101,19 +103,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULq-sC-sSp">
-                                <rect key="frame" x="70" y="58" width="10" height="10"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="largeImageView" translatesAutoresizingMaskIntoConstraints="NO" id="ULq-sC-sSp">
+                                <rect key="frame" x="30" y="30" width="540" height="540"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ULq-sC-sSp" secondAttribute="height" multiplier="1:1" id="vGH-UK-I3Q"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGX-uY-iCM">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="vLq-D7-rY7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ULq-sC-sSp" firstAttribute="top" secondItem="tku-Ql-WSd" secondAttribute="bottom" constant="10" id="4EP-XR-QUo"/>
+                            <constraint firstItem="ULq-sC-sSp" firstAttribute="centerX" secondItem="Qqo-dq-1N7" secondAttribute="centerX" id="56V-Wt-NYP"/>
+                            <constraint firstItem="ULq-sC-sSp" firstAttribute="centerY" secondItem="Qqo-dq-1N7" secondAttribute="centerY" id="Iax-Mc-Cc8"/>
+                            <constraint firstItem="MGX-uY-iCM" firstAttribute="centerY" secondItem="Qqo-dq-1N7" secondAttribute="centerY" id="OXc-z4-9RX"/>
+                            <constraint firstItem="MGX-uY-iCM" firstAttribute="centerX" secondItem="Qqo-dq-1N7" secondAttribute="centerX" id="Rfi-h3-L9N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ULq-sC-sSp" secondAttribute="trailing" constant="10" id="hbT-Qm-62Z"/>
+                            <constraint firstItem="ULq-sC-sSp" firstAttribute="leading" secondItem="Qqo-dq-1N7" secondAttribute="leadingMargin" constant="10" id="ilX-wd-1FU"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="ULq-sC-sSp" id="rSK-Pb-qiR"/>
                         <outlet property="view" destination="ULq-sC-sSp" id="jRl-5z-XOZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="otG-R2-bXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="389"/>
+            <point key="canvasLocation" x="1214" y="377"/>
         </scene>
     </scenes>
 </document>

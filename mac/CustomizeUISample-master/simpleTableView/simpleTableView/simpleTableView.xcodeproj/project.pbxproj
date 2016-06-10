@@ -35,6 +35,8 @@
 		133686CC1D0B47E300A46A38 /* 138138.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686CB1D0B47E300A46A38 /* 138138.png */; };
 		133686CE1D0B489E00A46A38 /* rsz_1rsz_1スクリーンショット_2016-06-11_34647.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686CD1D0B489E00A46A38 /* rsz_1rsz_1スクリーンショット_2016-06-11_34647.png */; };
 		133686D01D0B495500A46A38 /* fullSize.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686CF1D0B495500A46A38 /* fullSize.png */; };
+		133686D41D0B50A700A46A38 /* violet120.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686D31D0B50A700A46A38 /* violet120.png */; };
+		133686D61D0B519E00A46A38 /* fullVioletLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686D51D0B519E00A46A38 /* fullVioletLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		133686CB1D0B47E300A46A38 /* 138138.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 138138.png; sourceTree = "<group>"; };
 		133686CD1D0B489E00A46A38 /* rsz_1rsz_1スクリーンショット_2016-06-11_34647.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rsz_1rsz_1スクリーンショット_2016-06-11_34647.png"; sourceTree = "<group>"; };
 		133686CF1D0B495500A46A38 /* fullSize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullSize.png; sourceTree = "<group>"; };
+		133686D31D0B50A700A46A38 /* violet120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violet120.png; path = ../violet120.png; sourceTree = "<group>"; };
+		133686D51D0B519E00A46A38 /* fullVioletLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullVioletLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +176,10 @@
 		131D23571D0AB22B00721C1C /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				133686D31D0B50A700A46A38 /* violet120.png */,
 				133686BD1D0B422700A46A38 /* ----------------------------20-2.png */,
 				133686C11D0B42FC00A46A38 /* abcd.png */,
+				133686D51D0B519E00A46A38 /* fullVioletLogo.png */,
 				133686CF1D0B495500A46A38 /* fullSize.png */,
 				133686BE1D0B422700A46A38 /* abc.png */,
 				133686B31D0B3F7400A46A38 /* noLogoSkyBlue.png */,
@@ -303,6 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133686D41D0B50A700A46A38 /* violet120.png in Resources */,
+				133686D61D0B519E00A46A38 /* fullVioletLogo.png in Resources */,
 				131D23611D0AB26F00721C1C /* Field.png in Resources */,
 				133686B61D0B402100A46A38 /* noLogoSkyBlue90.png in Resources */,
 				133686BF1D0B422700A46A38 /* ----------------------------20-2.png in Resources */,
