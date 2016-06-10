@@ -10,6 +10,9 @@ import UIKit
 
 class FirstTabViewController: UIViewController {
     
+    @IBOutlet var table:UITableView!
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,4 +21,9 @@ class FirstTabViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func tableview(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        // tableCell の ID で UITableViewCell のインスタンスを生成
+        let cell = table.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
+        return cell
+    }
 }

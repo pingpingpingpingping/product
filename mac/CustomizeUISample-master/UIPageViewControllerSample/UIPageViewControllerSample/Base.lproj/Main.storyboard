@@ -61,7 +61,6 @@
         <!--Item 2-->
         <scene sceneID="8xr-mn-rZw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eXs-ya-D7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Bcz-YX-nI2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cwS-6J-xJ8"/>
@@ -90,13 +89,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="GNR-0H-V1T"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXs-ya-D7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1886" y="-773"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="OMy-z0-hoh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5h3-PK-Bkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PHh-IZ-8xE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3de-2f-81h"/>
@@ -109,7 +108,7 @@
                             <tableView clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Bq-hE-Upg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="447"/>
                                 <color key="backgroundColor" red="0.32941177490000001" green="0.19215688110000001" blue="0.53725492949999998" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstTabViewController(Item1)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqb-Jc-WSR">
@@ -135,6 +134,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="TYL-MI-vQp"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5h3-PK-Bkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1820" y="-1421"/>
         </scene>
@@ -147,11 +147,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" indentationWidth="10" textLabel="KbN-oe-IYg" detailTextLabel="ZhN-SR-gWy" rowHeight="66" style="IBUITableViewCellStyleValue2" id="bQi-aI-0g5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="detailDisclosureButton" indentationWidth="8" reuseIdentifier="item3Cell" textLabel="KbN-oe-IYg" detailTextLabel="ZhN-SR-gWy" rowHeight="66" style="IBUITableViewCellStyleValue2" id="bQi-aI-0g5">
                                 <rect key="frame" x="0.0" y="28" width="600" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bQi-aI-0g5" id="fcl-zz-rSO">
-                                    <rect key="frame" x="0.0" y="0.0" width="553" height="65"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="533" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KbN-oe-IYg">
@@ -165,7 +165,7 @@
                                             <rect key="frame" x="112" y="25" width="33" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -188,7 +188,6 @@
         <!--First Tab View Controller-->
         <scene sceneID="tIc-sj-5j3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F06-E1-dSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="FirstTabViewController" id="gTn-uQ-a4a" customClass="FirstTabViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SBu-PX-TID">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -201,6 +200,7 @@
                         <segue destination="pcb-Vj-qLT" kind="relationship" relationship="viewControllers" id="EM4-OK-ao9"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F06-E1-dSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824" y="-727"/>
         </scene>
