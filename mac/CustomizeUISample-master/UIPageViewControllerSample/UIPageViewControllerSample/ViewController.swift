@@ -19,6 +19,7 @@ struct PageSettings {
     
     //UIScrollViewに表示するボタン名称
     static let pageScrollNavigationList: [String] = [
+        "Table",
         "🔖1番目",
         "🔖2番目",
         "🔖3番目",
@@ -30,6 +31,7 @@ struct PageSettings {
     
     //UIPageViewControllerに配置するUIViewControllerクラスの名称
     static let pageControllerIdentifierList : [String] = [
+        "FirstTableViewController",
         "FirstViewController",
         "SecondViewController",
         "ThirdViewController",
@@ -79,6 +81,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     //sm
     //ボタンタップ時の情報保存用の配列
     var buttonTappedInfoList : [String] = []
+    
+    var switch1IsOn : Bool!
+    var switch2IsOn : Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -273,7 +278,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         //Case3. 一番最後のpage番号のときの移動量
         } else if page == (PageSettings.pageScrollNavigationList.count - 1) {
             
-            self.scrollButtonOffsetX = Int(self.view.frame.size.width) / 3 * (page - 2)
+            self.scrollButtonOffsetX = Int(self.view.frame.size.width) / 3 * (page - 1)
         }
         
         UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
@@ -300,6 +305,32 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
             )
             
         }, completion: nil)
+    }
+    
+    //Table Viewのセルの数を指定
+    func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    //各セルの要素を設定する
+    func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // tableCell の ID で UITableViewCell のインスタンスを生成
+        let cell = table.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
+        
+        // Tag番号 0 で UITableViewCell インスタンスの生成
+        let tableViewCell = table.viewWithTag(0) as! UITableViewCell
+//        tableViewCell.insertSubview(view: subViewOfTableView, atIndex: 0)
+        
+        // Tag番号 1 で UISwitch インスタンスの生成
+        let switch1 = table.viewWithTag(1) as! UISwitch
+        switch1.on = self.switch1IsOn
+        
+        // Tag番号 ２ で UISwitch インスタンスの生成
+        let switch2 = table.viewWithTag(2) as! UISwitch
+        switch2.on = self.switch2IsOn
+        
+        return cell
     }
     
     override func didReceiveMemoryWarning() {
