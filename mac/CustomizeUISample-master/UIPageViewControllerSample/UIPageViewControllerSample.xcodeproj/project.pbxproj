@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13B6F5581D093D900053E70F /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6F5571D093D900053E70F /* FirstTabViewController.swift */; };
+		13B6F5591D0A5B530053E70F /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6F5571D093D900053E70F /* FirstTabViewController.swift */; };
 		DE68EA811CAF8E7A00F3ED17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68EA801CAF8E7A00F3ED17 /* AppDelegate.swift */; };
 		DE68EA831CAF8E7A00F3ED17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68EA821CAF8E7A00F3ED17 /* ViewController.swift */; };
 		DE68EA861CAF8E7A00F3ED17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE68EA841CAF8E7A00F3ED17 /* Main.storyboard */; };
@@ -310,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B6F5591D0A5B530053E70F /* FirstTabViewController.swift in Sources */,
 				DE68EAA11CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

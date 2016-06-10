@@ -76,6 +76,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     //メニュー用スクロールビューのX座標のOffset値
     var scrollButtonOffsetX : Int = 0
     
+    //sm
+    //ボタンタップ時の情報保存用の配列
+    var buttonTappedInfoList : [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -93,7 +97,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         
         //UIPageViewControllerの設定
         // * .Scrollだと謎のキャッシュ問題が発生
-        self.pageViewController = UIPageViewController(transitionStyle: .PageCurl, navigationOrientation: .Horizontal, options: nil)
+        self.pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         
         //UIPageViewControllerのデリゲート
         self.pageViewController.delegate = self
@@ -128,7 +132,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
             CGFloat(self.view.frame.width),
             CGFloat(self.view.frame.height - (self.menuScrollView.frame.origin.y + self.menuScrollView.frame.height))
         )
-        self.pageViewController.view.backgroundColor = UIColor.grayColor()
+        self.pageViewController.view.backgroundColor = UIColor.redColor()
         self.menuScrollView.backgroundColor = UIColor.lightGrayColor()
         
         //UIScrollViewの初期設定
@@ -161,16 +165,16 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         let targetViewControllers : [UIViewController] = PageSettings.generateViewControllerList()
-        
-        if self.viewControllerIndex == targetViewControllers.count - 1 {
-            return nil
-        } else {
-            self.viewControllerIndex = self.viewControllerIndex + 1
-        }
-        //スクロールビューとボタンを押されたボタンに応じて移動する
-        self.moveToCurrentButtonScrollView(self.viewControllerIndex)
-        self.moveToCurrentButtonLabel(self.viewControllerIndex)
-        
+//
+//        if self.viewControllerIndex == targetViewControllers.count - 1 {
+//            return nil
+//        } else {
+//            self.viewControllerIndex = self.viewControllerIndex + 1
+//        }
+//        //スクロールビューとボタンを押されたボタンに応じて移動する
+//        self.moveToCurrentButtonScrollView(self.viewControllerIndex)
+//        self.moveToCurrentButtonLabel(self.viewControllerIndex)
+//        
         return targetViewControllers[self.viewControllerIndex]
     }
 
@@ -178,16 +182,16 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
     
         let targetViewControllers : [UIViewController] = PageSettings.generateViewControllerList()
-        
-        if self.viewControllerIndex == 0 {
-            return nil
-        } else {
-            self.viewControllerIndex = self.viewControllerIndex - 1
-        }
-        //スクロールビューとボタンを押されたボタンに応じて移動する
-        self.moveToCurrentButtonScrollView(self.viewControllerIndex)
-        self.moveToCurrentButtonLabel(self.viewControllerIndex)
-        
+//        
+//        if self.viewControllerIndex == 0 {
+//            return nil
+//        } else {
+//            self.viewControllerIndex = self.viewControllerIndex - 1
+//        }
+//        //スクロールビューとボタンを押されたボタンに応じて移動する
+//        self.moveToCurrentButtonScrollView(self.viewControllerIndex)
+//        self.moveToCurrentButtonLabel(self.viewControllerIndex)
+//        
         return targetViewControllers[self.viewControllerIndex]
     }
     
@@ -289,7 +293,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
             
             self.slidingLabel.frame = CGRectMake(
-                CGFloat(Int(self.view.frame.width) / 3 * page),
+                CGFloat(Int(self.view.frame.width) / 3 * (page-1)),
                 CGFloat(PageSettings.slidingLabelY),
                 CGFloat(Int(self.view.frame.width) / 3),
                 CGFloat(PageSettings.slidingLabelH)
