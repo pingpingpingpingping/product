@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPO-P4-PZy">
+                                <rect key="frame" x="213" y="537" width="174" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullVioletLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FOv-wg-p1h">
+                                <rect key="frame" x="25" y="24" width="550" height="552"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FOv-wg-p1h" secondAttribute="height" multiplier="275:276" id="dzc-z9-yF5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70980392156862748" green="0.30196078431372547" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FOv-wg-p1h" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="5" id="5Jq-yA-edo"/>
+                            <constraint firstItem="iPO-P4-PZy" firstAttribute="bottom" secondItem="FOv-wg-p1h" secondAttribute="bottom" id="BaX-cm-bqW"/>
+                            <constraint firstItem="FOv-wg-p1h" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LEd-OC-OKL"/>
+                            <constraint firstItem="FOv-wg-p1h" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LhS-rz-eVV"/>
+                            <constraint firstItem="FOv-wg-p1h" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="O45-fr-0TF"/>
+                            <constraint firstItem="iPO-P4-PZy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZVk-tG-FdY"/>
+                            <constraint firstItem="iPO-P4-PZy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cjs-o1-6na"/>
+                            <constraint firstItem="iPO-P4-PZy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hQv-th-0xw"/>
+                            <constraint firstItem="FOv-wg-p1h" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jUv-im-qxh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FOv-wg-p1h" secondAttribute="trailing" constant="5" id="moS-ZB-DNa"/>
+                            <constraint firstItem="FOv-wg-p1h" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="5" id="toc-F8-Jrr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Jq-yA-edo"/>
+                                <exclude reference="LEd-OC-OKL"/>
+                                <exclude reference="O45-fr-0TF"/>
+                                <exclude reference="ZVk-tG-FdY"/>
+                                <exclude reference="cjs-o1-6na"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fullVioletLogo.png" width="655" height="655"/>
+    </resources>
+</document>
