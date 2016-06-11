@@ -19,7 +19,6 @@ struct PageSettings {
     
     //UIScrollViewに表示するボタン名称
     static let pageScrollNavigationList: [String] = [
-        "Table",
         "🔖1番目",
         "🔖2番目",
         "🔖3番目",
@@ -31,7 +30,6 @@ struct PageSettings {
     
     //UIPageViewControllerに配置するUIViewControllerクラスの名称
     static let pageControllerIdentifierList : [String] = [
-        "FirstTableViewController",
         "FirstViewController",
         "SecondViewController",
         "ThirdViewController",
@@ -85,6 +83,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     var switch1IsOn : Bool!
     var switch2IsOn : Bool!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,27 +116,31 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         
         //UIPageViewControllerを配置
         self.view.addSubview(self.pageViewController.view)
+
     }
     
     //レイアウト処理が完了した際の処理
     override func viewDidLayoutSubviews() {
         
-        //UIScrollViewのサイズを変更する
-        self.menuScrollView.frame = CGRectMake(
-            CGFloat(0),
-            CGFloat(PageSettings.menuScrollViewY),
-            CGFloat(self.view.frame.width),
-            CGFloat(PageSettings.menuScrollViewH)
-        )
-        
         //UIPageViewControllerのサイズを変更する
         //サイズの想定 →（X座標：0, Y座標：[UIScrollViewのY座標＋高さ], 幅：[おおもとのViewの幅], 高さ：[おおもとのViewの高さ] - [UIScrollViewのY座標＋高さ]）
         self.pageViewController.view.frame = CGRectMake(
             CGFloat(0),
-            CGFloat(self.menuScrollView.frame.origin.y + self.menuScrollView.frame.height),
+            CGFloat(0),
+//            CGFloat(self.menuScrollView.frame.origin.y + self.menuScrollView.frame.height),
             CGFloat(self.view.frame.width),
-            CGFloat(self.view.frame.height - (self.menuScrollView.frame.origin.y + self.menuScrollView.frame.height))
+            CGFloat(self.view.frame.height - (self.menuScrollView.frame.height))
+//            CGFloat(10)
         )
+        //UIScrollViewのサイズを変更する
+        self.menuScrollView.frame = CGRectMake(
+            CGFloat(0),
+            CGFloat(self.view.frame.height - (self.menuScrollView.frame.height)),
+            //            CGFloat(627),
+            CGFloat(self.view.frame.width),
+            CGFloat(PageSettings.menuScrollViewH)
+        )
+        
         self.pageViewController.view.backgroundColor = UIColor.redColor()
         self.menuScrollView.backgroundColor = UIColor.lightGrayColor()
         
@@ -153,7 +157,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         self.menuScrollView.bringSubviewToFront(self.slidingLabel)
         self.slidingLabel.frame = CGRectMake(
             CGFloat(0),
-            CGFloat(PageSettings.slidingLabelY),
+//            CGFloat(0),
+            CGFloat(self.view.frame.height - (self.menuScrollView.frame.origin.y + self.menuScrollView.frame.height)),
             CGFloat(self.view.frame.width / 3),
             CGFloat(PageSettings.slidingLabelH)
         )
@@ -278,7 +283,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         //Case3. 一番最後のpage番号のときの移動量
         } else if page == (PageSettings.pageScrollNavigationList.count - 1) {
             
-            self.scrollButtonOffsetX = Int(self.view.frame.size.width) / 3 * (page - 1)
+            self.scrollButtonOffsetX = Int(self.view.frame.size.width) / 3 * (page - 2)
         }
         
         UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
@@ -298,7 +303,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         UIView.animateWithDuration(0.2, delay: 0, options: [], animations: {
             
             self.slidingLabel.frame = CGRectMake(
-                CGFloat(Int(self.view.frame.width) / 3 * (page-1)),
+                CGFloat(Int(self.view.frame.width) / 3 * (page)),
                 CGFloat(PageSettings.slidingLabelY),
                 CGFloat(Int(self.view.frame.width) / 3),
                 CGFloat(PageSettings.slidingLabelH)
