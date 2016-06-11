@@ -22,7 +22,7 @@
     UIImageToMat(image, mat);
     //    NSLog(@"mat rows:%", mat.rows);
     
-    cv::Mat test(mat.cols, mat.rows, mat.type());
+//    cv::Mat test(mat.cols, mat.rows, mat.type());
     
     //このサイズにオベジェクトがある想定。トリミング
     
@@ -31,9 +31,9 @@
     int size_x = 300;
     int size_y = 300;
     
-    cv::Rect obj_rect = cv::Rect(10, 10, size_x,  size_y);
+    cv::Rect obj_rect = cv::Rect(margin_x, margin_y, size_x,  size_y);
     //cv::Rect obj_rect = cv::Rect(int(cut_img.cols/4), int(cut_img.rows/4), int(cut_img.cols)/ 4,  int(cut_img.rows)/4);
-    cv::Mat cut_img = cv::Mat(mat, obj_rect);
+    cv::Mat cut_img = cv::Mat(mat, obj_rect).clone();
     //cv::Mat cut_img = image;
     //グレースケール
     
@@ -48,9 +48,9 @@
     std::vector<cv::Vec4i> hierarchy;
     
     //輪郭取得
-    //cv::findContours(binImage, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
-    //cv::findContours(binImage, contours, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
-    cv::findContours(binImage, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
+//    cv::findContours(binImage, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
+    cv::findContours(binImage, contours, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
+//    cv::findContours(binImage, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
     
     // 検出された輪郭線を緑で描画
     /*
@@ -79,7 +79,7 @@
         // 近似の面積が一定以上なら取得
         double area = cv::contourArea(approx);
         
-        if (area > 3000.0){
+        if (area > 1000.0){
             //     if (area > 1000.0 && area < 8000.0){
             //青で囲む場合
             //cv::polylines(cut_img, approx, true, cv::Scalar(255, 0, 0), 2);
@@ -121,9 +121,9 @@
     for (int i = 0; i < roiCnt; i++){
         std::cout << "i: " << i << "roi.row: "<<roi[i].rows << std::endl;
     }
-    
-    test = grayImage;
-    UIImage *resultImage = MatToUIImage(mat);
+    cv::Mat test(grayImage.cols, grayImage.rows, grayImage.type());
+    test = binImage;
+    UIImage *resultImage = MatToUIImage(test);
     
     std::cout << resultImage.size.width;
     return resultImage;
