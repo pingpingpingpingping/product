@@ -15,6 +15,8 @@
 		130005851D0BEBC7008EF193 /* FamitoryForBotchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130005841D0BEBC7008EF193 /* FamitoryForBotchTests.swift */; };
 		130005901D0BEBC8008EF193 /* FamitoryForBotchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1300058F1D0BEBC8008EF193 /* FamitoryForBotchUITests.swift */; };
 		4A994FFB1D0BF62600B5DE71 /* Detector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A994FF91D0BF62600B5DE71 /* Detector.mm */; };
+		822A37E11D0C08DF002215EF /* CameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A37E01D0C08DF002215EF /* CameraUtil.swift */; };
+		822A37E31D0C4262002215EF /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A37E21D0C4262002215EF /* TalkViewController.swift */; };
 		E8EF7036B92A5E7703B5A0EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6473277120F0EF76E06AE4D4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		4A994FF91D0BF62600B5DE71 /* Detector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Detector.mm; sourceTree = "<group>"; };
 		5EA360E5E785016AD1989A87 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6473277120F0EF76E06AE4D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		822A37E01D0C08DF002215EF /* CameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUtil.swift; sourceTree = "<group>"; };
+		822A37E21D0C4262002215EF /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				1300056F1D0BEBC7008EF193 /* AppDelegate.swift */,
+				822A37E01D0C08DF002215EF /* CameraUtil.swift */,
 				130005711D0BEBC7008EF193 /* ViewController.swift */,
+				822A37E21D0C4262002215EF /* TalkViewController.swift */,
 				130005731D0BEBC7008EF193 /* Main.storyboard */,
 				130005761D0BEBC7008EF193 /* Assets.xcassets */,
 				130005781D0BEBC7008EF193 /* LaunchScreen.storyboard */,
@@ -225,7 +231,7 @@
 				TargetAttributes = {
 					1300056B1D0BEBC7008EF193 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = PCN5B43B5M;
+						DevelopmentTeam = 587L42B986;
 					};
 					1300057F1D0BEBC7008EF193 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -341,7 +347,9 @@
 			files = (
 				130005721D0BEBC7008EF193 /* ViewController.swift in Sources */,
 				4A994FFB1D0BF62600B5DE71 /* Detector.mm in Sources */,
+				822A37E11D0C08DF002215EF /* CameraUtil.swift in Sources */,
 				130005701D0BEBC7008EF193 /* AppDelegate.swift in Sources */,
+				822A37E31D0C4262002215EF /* TalkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,11 +494,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FamitoryForBotch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ping.FamitoryForBotch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FamitoryForBotch/FamitoryForBotch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -503,11 +514,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FamitoryForBotch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ping.FamitoryForBotch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FamitoryForBotch/FamitoryForBotch-Bridging-Header.h";
 			};
 			name = Release;
