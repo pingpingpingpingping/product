@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2U4-D5-9DA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6HM-rp-KeK">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="2U4-D5-9DA" customClass="ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qkf-ra-E4v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="Pg8-UL-PEG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="Nwm-cC-xWg" kind="embed" id="2hU-9s-u5n"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="EP6-Ku-OUU">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="rbv-0R-GkU" kind="embed" id="npz-CY-YIx"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraView" destination="1b0-yQ-qmm" id="V8u-hy-taL"/>
+                        <outlet property="scrollView" destination="SkL-0k-Aeg" id="7jI-tF-CKB"/>
+                        <outlet property="subViewImage" destination="1b0-yQ-qmm" id="Vbn-XD-L8E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbf-JP-e52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61.5" y="421.5"/>
+        </scene>
+        <!--Sub1 View Controller-->
+        <scene sceneID="i1M-Dv-wmW">
+            <objects>
+                <viewController id="Nwm-cC-xWg" customClass="sub1ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OyR-2P-5wf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="subViewImage" image="noEggLogoSkyBlue.png" id="1b0-yQ-qmm">
+                                <rect key="frame" x="7" y="103" width="361" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="initialImageBeforeCameraOn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TgY-lK-6bm">
+                                <rect key="frame" x="21" y="436" width="333" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F28-ju-a0X">
+                                <rect key="frame" x="164" y="417" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sampleButtonAction:" destination="rbv-0R-GkU" eventType="touchUpInside" id="0F1-Ra-tPX"/>
+                                    <action selector="tapButton:" destination="Nwm-cC-xWg" eventType="touchUpInside" id="o7r-nX-Ge5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71705538034439087" green="0.93258845806121826" blue="0.69592291116714478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="F28-ju-a0X" id="wkl-S3-6rN"/>
+                        <outlet property="subViewImage" destination="1b0-yQ-qmm" id="gR8-mU-riV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z83-Na-hia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="1015"/>
+        </scene>
+        <!--Sub2 View Controller-->
+        <scene sceneID="de3-MP-Vvc">
+            <objects>
+                <viewController id="rbv-0R-GkU" customClass="sub2ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jAO-to-T2r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" pagingEnabled="YES" id="SkL-0k-Aeg" customClass="scrollSecondViewController">
+                                <rect key="frame" x="0.0" y="14" width="376" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93345090023570543" green="0.93417171560000001" blue="0.59821876109171246" alpha="0.60999999999999999" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.66229231089999996" blue="0.7736166632" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="sampleButton" destination="F28-ju-a0X" id="o2H-3h-Y2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2n-3r-300" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.5" y="1400"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noEggLogoSkyBlue.png" width="1000" height="1000"/>
+    </resources>
+</document>
