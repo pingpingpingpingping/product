@@ -130,15 +130,15 @@
 - (cv::Mat)addFace:(cv::Mat)mat{
     
     //output image
-    int margin_x = 0;
-    int margin_y = 0;
+    int margin_x = 40;
+    int margin_y = 40;
     cv::Mat output(mat.cols + margin_x, mat.rows + margin_y, mat.type());
     
-    for(int y = 0; y < mat.rows; y++){
-        for(int x = 0; x < mat.cols; x++){
-            output.at<cv::Vec3b>(y + margin_y/2, x + margin_x/2) = mat.at<cv::Vec3b>(y,x);
-        }
-    }
+//    for(int y = 0; y < mat.rows; y++){
+//        for(int x = 0; x < mat.cols; x++){
+//            output.at<cv::Vec3b>(y + margin_y/2, x + margin_x/2) = mat.at<cv::Vec3b>(y,x);
+//        }
+//    }
     
     //import filename
     NSString *file_lefteye = @"./parts/lefteye.png";
