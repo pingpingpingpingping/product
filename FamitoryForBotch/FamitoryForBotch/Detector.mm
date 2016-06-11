@@ -18,7 +18,7 @@
     
     
     
-    cv::Mat_<double> mat;
+    cv::Mat mat;
     UIImageToMat(image, mat);
     //    NSLog(@"mat rows:%", mat.rows);
     
@@ -32,11 +32,15 @@
     int size_y = 300;
     
     cv::Rect obj_rect = cv::Rect(margin_x, margin_y, size_x,  size_y);
-    //cv::Rect obj_rect = cv::Rect(int(cut_img.cols/4), int(cut_img.rows/4), int(cut_img.cols)/ 4,  int(cut_img.rows)/4);
-    cv::Mat cut_img = cv::Mat(mat, obj_rect).clone();
-    //cv::Mat cut_img = image;
-    //グレースケール
+    cv::Mat cut_img(size_x, size_y, mat.type());
     
+    for(int y=0; y<cut_img.rows; y++){
+        for(int x=0; x<cut_img.cols; x++){
+            cut_img.at<cv::Vec3b>(y,x) = mat.at<cv::Vec3b>(margin_y + y, margin_x + x);
+        }
+    }
+    
+    //グレースケール
     cv::Mat grayImage,binImage;
     cv::cvtColor(cut_img, grayImage, CV_BGR2GRAY);
     
