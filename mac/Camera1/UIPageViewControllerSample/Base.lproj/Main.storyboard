@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iia-f3-Qu7">
+                                <rect key="frame" x="14" y="20" width="348" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mav-g7-Qiq">
+                                <rect key="frame" x="20" y="256" width="335" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="DDs-Ik-Onf">
+                                <rect key="frame" x="0.0" y="427" width="750" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="bCameraStart" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="grM-cE-P23">
+                                        <rect key="frame" x="0.0" y="14" width="126" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.31383859946042003" blue="0.30107470675713299" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="cameraStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyU-a3-vyo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sKo-DN-n2i">
+                                        <rect key="frame" x="250" y="14" width="126" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.89457022659462859" green="1" blue="0.35587428760571593" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Album"/>
+                                        <connections>
+                                            <action selector="showAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28N-Mz-BnO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qZj-pV-VOA">
+                                        <rect key="frame" x="125" y="14" width="126" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.67630284923641593" blue="0.34466108217565594" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="savePic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNw-vM-7bf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bAlbum" destination="sKo-DN-n2i" id="8su-ZW-HIk"/>
+                        <outlet property="bSavePic" destination="qZj-pV-VOA" id="vdi-kv-GRR"/>
+                        <outlet property="cameraView" destination="iia-f3-Qu7" id="DLe-WQ-sD1"/>
+                        <outlet property="label" destination="Mav-g7-Qiq" id="3IL-28-OeL"/>
+                        <outlet property="scrollView" destination="DDs-Ik-Onf" id="t0w-lI-gdU"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="145.5" y="287.5"/>
+        </scene>
+    </scenes>
+</document>
