@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class Conversation: UIViewController {
     
     @IBOutlet weak var output: UILabel!
     @IBOutlet weak var input: UITextField!
@@ -52,6 +52,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        input.text = ""
     }
     
 }
