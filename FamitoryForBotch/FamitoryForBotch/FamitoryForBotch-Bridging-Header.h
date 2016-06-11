@@ -8,5 +8,6 @@
 @interface Detector: NSObject
 
 // ここにメソッド
+- (UIImage *)trimObject:(UIImage *)image;
 
 @end
