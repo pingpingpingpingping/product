@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     // 出力先
     var myOutput : AVCaptureVideoDataOutput!
     //画像の保存先
-    var image : UIImage?
+    var image2 : UIImage?
     
     let detector = Detector()
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         //ボタンが押された時の処理
         //画像をDetector.mmに送り、物体を検出し顔を描画する。
 //        let characterImage : UIImage?
-          self.image = self.detector.trimObject(self.image);
+          self.image2 = self.detector.trimObject(self.image2);
     }
 
     override func viewDidLoad() {
@@ -88,6 +88,10 @@ class ViewController: UIViewController {
             myDevice.activeVideoMinFrameDuration = CMTimeMake(1, 15)
             myDevice.unlockForConfiguration()
             
+            // デリゲートを設定
+            let queue: dispatch_queue_t = dispatch_queue_create("myqueue",  nil)
+            myOutput.setSampleBufferDelegate(self, queue: queue)
+            
             // 遅れてきたフレームは無視する
             myOutput.alwaysDiscardsLateVideoFrames = true
             
@@ -131,22 +135,19 @@ class ViewController: UIViewController {
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!)
     {
         dispatch_sync(dispatch_get_main_queue(), {
-            self.image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-            self.imageView.image = self.detector.trimObject(self.image);
+            let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
+            let obj_img :UIImage = self.detector.trimObject(image)
+            self.imageView.image = obj_img
+            print("a")
         })
     }
     
     //TalkViewControllerに画像を渡すために、Sequeのやつをオーバーライド
-    override func prepareForSeque(seque: UIStoryboardSeque, sender: AnyObject?){
-        var ViewController2 = seque.destinationViewController as! TalkViewController
-        ViewController2.charaImage = self.image;
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let talkViewContoroller = segue.destinationViewController as! TalkViewController
+        talkViewContoroller.charaImage = self.image2
     }
-    
-    
-    
-    
-    
-    
 
 
 
