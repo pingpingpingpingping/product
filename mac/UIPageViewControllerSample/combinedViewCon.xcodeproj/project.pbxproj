@@ -11,7 +11,7 @@
 		1300055F1D0B67F2008EF193 /* noEggLogoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1300055D1D0B67F2008EF193 /* noEggLogoBlack.png */; };
 		130005601D0B67F2008EF193 /* noEggLogoSkyBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1300055E1D0B67F2008EF193 /* noEggLogoSkyBlue.png */; };
 		130005621D0B67FE008EF193 /* noEggLogoGreenFill.png in Resources */ = {isa = PBXBuildFile; fileRef = 130005611D0B67FE008EF193 /* noEggLogoGreenFill.png */; };
-		130005E81D0C1A80008EF193 /* subSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130005E71D0C1A80008EF193 /* subSecondViewController.swift */; };
+		130005EC1D0C297C008EF193 /* subSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130005EB1D0C297C008EF193 /* subSecondViewController.swift */; };
 		131D231A1D0A8E0600721C1C /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131D23191D0A8E0600721C1C /* FirstTableViewController.swift */; };
 		131D231C1D0A9BEA00721C1C /* subViewOfTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131D231B1D0A9BEA00721C1C /* subViewOfTableCell.swift */; };
 		133686D81D0B5EAF00A46A38 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686D71D0B5EAF00A46A38 /* 120.png */; };
@@ -56,7 +56,7 @@
 		1300055D1D0B67F2008EF193 /* noEggLogoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noEggLogoBlack.png; sourceTree = "<group>"; };
 		1300055E1D0B67F2008EF193 /* noEggLogoSkyBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noEggLogoSkyBlue.png; sourceTree = "<group>"; };
 		130005611D0B67FE008EF193 /* noEggLogoGreenFill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noEggLogoGreenFill.png; sourceTree = "<group>"; };
-		130005E71D0C1A80008EF193 /* subSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = subSecondViewController.swift; sourceTree = "<group>"; };
+		130005EB1D0C297C008EF193 /* subSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = subSecondViewController.swift; sourceTree = "<group>"; };
 		131D23191D0A8E0600721C1C /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
 		131D231B1D0A9BEA00721C1C /* subViewOfTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = subViewOfTableCell.swift; sourceTree = "<group>"; };
 		133686D71D0B5EAF00A46A38 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
@@ -178,12 +178,12 @@
 		DE68EAAE1CAFFE2400F3ED17 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				130005E71D0C1A80008EF193 /* subSecondViewController.swift */,
 				130005511D0B6683008EF193 /* subViewController.swift */,
 				131D231B1D0A9BEA00721C1C /* subViewOfTableCell.swift */,
 				131D23191D0A8E0600721C1C /* FirstTableViewController.swift */,
 				DE68EAAF1CAFFE5F00F3ED17 /* FirstViewController.swift */,
 				DE68EAB11CB0047500F3ED17 /* SecondViewController.swift */,
+				130005EB1D0C297C008EF193 /* subSecondViewController.swift */,
 				DE68EAB31CB004FC00F3ED17 /* ThirdViewController.swift */,
 				DE68EAB51CB0051400F3ED17 /* FourthViewController.swift */,
 				DE68EAB71CB0052600F3ED17 /* FifthViewController.swift */,
@@ -336,7 +336,7 @@
 				DE68EAB21CB0047500F3ED17 /* SecondViewController.swift in Sources */,
 				DE68EAB01CAFFE6000F3ED17 /* FirstViewController.swift in Sources */,
 				131D231A1D0A8E0600721C1C /* FirstTableViewController.swift in Sources */,
-				130005E81D0C1A80008EF193 /* subSecondViewController.swift in Sources */,
+				130005EC1D0C297C008EF193 /* subSecondViewController.swift in Sources */,
 				DE68EABA1CB0053D00F3ED17 /* SixthViewController.swift in Sources */,
 				DE68EAB41CB004FC00F3ED17 /* ThirdViewController.swift in Sources */,
 				130005521D0B6683008EF193 /* subViewController.swift in Sources */,

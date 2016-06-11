@@ -10,30 +10,11 @@ import UIKit
 
 class subSecondViewController: SecondViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        super.cameraStart(self)
         // Do any additional setup after loading the view.
-        // カメラの撮影開始
-        func cameraStart(sender : AnyObject) {
-            
-            let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
-            // カメラが利用可能かチェック
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-                // インスタンスの作成
-                let cameraPicker = UIImagePickerController()
-                cameraPicker.sourceType = sourceType
-                cameraPicker.delegate = self
-                            self.presentViewController(cameraPicker, animated: true, completion: nil)
-//                self.cameraView.addSubview(cameraPicker)
-            }
-            else{
-                cameraLabel.text = "error"
-                
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {

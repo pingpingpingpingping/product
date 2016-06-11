@@ -8,110 +8,161 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+struct ButtonLabels {
+    
+    // ページの高さ
+    var pHeight:CGFloat!
+    // ページの幅
+    var pWidth:CGFloat!
+    
+    static let buttonNavigationList: [String] = [
+        "Start",
+        "Save",
+        "Album",
+        "dummy1",
+        "dummy2",
+        "dummy3"
+    ]
+    
+}
 
-    /////////////////////////
-    @IBOutlet var cameraView : UIImageView!
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet var bCameraStart : UIButton!
-    @IBOutlet var bSavePic : UIButton!
-    @IBOutlet var bAlbum : UIButton!
-    
-    @IBOutlet var cameraLabel : UILabel!
+    @IBOutlet var subSecondView: UIView!
+    @IBOutlet var subViewImage: UIImageView!
+    @IBOutlet var scrollViewCon: scrollSecondViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     // カメラの撮影開始
-//    @IBAction func cameraStart(sender : AnyObject) {
-//        
-//        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
-//        // カメラが利用可能かチェック
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-//            // インスタンスの作成
-//            let cameraPicker = UIImagePickerController()
-//            cameraPicker.sourceType = sourceType
-//            cameraPicker.delegate = self
-//            self.presentViewController(cameraPicker, animated: true, completion: nil)
-////            self.cameraView.addSubview(cameraPicker)
-//        }
-//        else{
-//            cameraLabel.text = "error"
-//            
-//        }
-//    }
+    func cameraStart(sender : AnyObject) {
+        
+        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
+        // カメラが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            // インスタンスの作成
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.presentViewController(cameraPicker, animated: true, completion: nil)
+//            self.cameraView.addSubview(cameraPicker)
+        }
+    }
     
     //　撮影が完了時した時に呼ばれる
     func imagePickerController(imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
+        
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            cameraView.contentMode = .ScaleAspectFit
-            cameraView.image = pickedImage
-            
+            subSecondView.contentMode = .ScaleAspectFit
+            subViewImage.image = pickedImage
         }
         
         //閉じる処理
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        cameraLabel.text = "Tap the [Save] to save a picture"
-        
     }
     
-    // 撮影がキャンセルされた時に呼ばれる
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
-        cameraLabel.text = "Canceled"
-    }
+//    // 撮影がキャンセルされた時に呼ばれる
+//    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+//        picker.dismissViewControllerAnimated(true, completion: nil)
+//        cameraLabel.text = "Canceled"
+//    }
     
     
     // 写真を保存
     @IBAction func savePic(sender : AnyObject) {
-        let image:UIImage! = cameraView.image
+        let image:UIImage! = subViewImage.image
         
         if image != nil {
             UIImageWriteToSavedPhotosAlbum(image, self, "image:didFinishSavingWithError:contextInfo:", nil)
         }
-        else{
-            cameraLabel.text = "image Failed !"
-        }
-        
     }
     
     // 書き込み完了結果の受け取り
     func image(image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutablePointer<Void>) {
         print("1")
         
-        if error != nil {
-            print(error.code)
-            cameraLabel.text = "Save Failed !"
-        }
-        else{
-            cameraLabel.text = "Save Succeeded"
-        }
     }
     
-    // アルバムを表示
-    @IBAction func showAlbum(sender : AnyObject) {
-        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.PhotoLibrary
+//    // アルバムを表示
+//    func showAlbum(sender : AnyObject) {
+//        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.PhotoLibrary
+//        
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+//            // インスタンスの作成
+//            let cameraPicker = UIImagePickerController()
+//            cameraPicker.sourceType = sourceType
+//            cameraPicker.delegate = self
+//            self.presentViewController(cameraPicker, animated: true, completion: nil)
+//            
+//        }
+//        
+//    }
+    func setupScrollImages(){
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
-            // インスタンスの作成
-            let cameraPicker = UIImagePickerController()
-            cameraPicker.sourceType = sourceType
-            cameraPicker.delegate = self
-            self.presentViewController(cameraPicker, animated: true, completion: nil)
-            
-            cameraLabel.text = "Tap the [Start] to save a picture"
-        }
-        else{
-            cameraLabel.text = "error"
-            
-        }
+        // 描画開始の x,y 位置
+        var px:CGFloat = 0.0
+        let py:CGFloat = 100.0
         
-    }
-    
-    override func didReceiveMemoryWarning() {
+        for i in 0 ..< subviews.count {
+            imgView = subviews[i] as! UIImageView
+            if (imgView.isKindOfClass(UIImageView) && imgView.tag > 0){
+                
+                var viewFrame:CGRect = imgView.frame
+                viewFrame.origin = CGPointMake(px, py)
+                imgView.frame = viewFrame
+                
+                px += (pWidth)
+                
+            }
+        }
+        // UIScrollViewのコンテンツサイズを画像のtotalサイズに合わせる
+        let nWidth:CGFloat = pWidth * CGFloat(pNum)
+        scrollView.contentSize = CGSizeMake(nWidth, pHeight)
+        
+
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
 }
+
+class scrollSecondViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        
+        // Totalのbutton数
+        let bNum:Int  = ButtonLabels.buttonNavigationList.count
+        
+        ButtonLabels.pWidth = screenSize.width
+        
+        let buttonElement: UIButton! = UIButton()
+        
+        for i in 0 ..< bNum {
+            let n:Int = i+1
+            
+            // UIButtonのインスタンス
+            var rect:CGRect = buttonElement.frame
+            rect.size.height = sHeight
+            rect.size.width = sWidth
+            buttonElement.frame = rect
+            buttonElement.setTitle(PageSettings.buttonNavigationList[i], forState: .Normal)
+            buttonElement.tag = n
+            buttonElement.frame = CGRectMake(<#T##x: CGFloat##CGFloat#>, <#T##y: CGFloat##CGFloat#>, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
+            // UIScrollViewのインスタンスに画像を貼付ける
+            self.scrollView.addSubview(buttonElement)
+            
+        }
+        
+        setupScrollImages()
+        
+    }
+}
+
+
+

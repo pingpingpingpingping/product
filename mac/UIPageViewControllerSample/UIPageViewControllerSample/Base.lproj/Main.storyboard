@@ -180,68 +180,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kJM-4k-2IR">
-                                <rect key="frame" x="23" y="582" width="328" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rkK-iG-nyM">
-                                <rect key="frame" x="45" y="393" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="1" green="0.66229231089999996" blue="0.7736166632" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qEQ-tv-rCR">
-                                <rect key="frame" x="253" y="393" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Album">
-                                    <color key="titleColor" red="1" green="0.66229231089999996" blue="0.7736166632" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showAlbum:" destination="SYm-10-LNf" eventType="touchUpInside" id="udx-5X-Zkb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dEN-Pa-qfh">
-                                <rect key="frame" x="159" y="393" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="1" green="0.66229231089999996" blue="0.7736166632" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="savePic:" destination="SYm-10-LNf" eventType="touchUpInside" id="4u0-nU-4bC"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" id="Rhv-ft-r2y" customClass="subSecondViewController">
-                                <rect key="frame" x="7" y="12" width="361" height="317"/>
+                            <view contentMode="scaleToFill" id="Rhv-ft-r2y" userLabel="I" customClass="subSecondViewController">
+                                <rect key="frame" x="0.0" y="20" width="375" height="576"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noEggLogoSkyBlue.png" id="KYs-ST-jSe">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="317"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="subViewImage" image="noEggLogoSkyBlue.png" id="KYs-ST-jSe">
+                                        <rect key="frame" x="7" y="129" width="361" height="317"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="initialImageBeforeCameraOn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OGH-FT-J7D">
+                                        <rect key="frame" x="21" y="454" width="333" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4o2-OC-EEQ">
-                                <rect key="frame" x="50" y="343" width="274" height="26"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8Yn-7U-40Z" customClass="scrollSecondViewController">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="bAlbum" destination="qEQ-tv-rCR" id="kN6-MB-Gdy"/>
-                        <outlet property="bCameraStart" destination="rkK-iG-nyM" id="v3S-9U-cjC"/>
-                        <outlet property="bSavePic" destination="dEN-Pa-qfh" id="evs-OB-zaC"/>
-                        <outlet property="cameraLabel" destination="4o2-OC-EEQ" id="lFm-n9-ZYh"/>
                         <outlet property="cameraView" destination="KYs-ST-jSe" id="zcy-FS-9RK"/>
+                        <outlet property="scrollView" destination="8Yn-7U-40Z" id="z8I-Y7-pmH"/>
+                        <outlet property="subSecondView" destination="Rhv-ft-r2y" id="NaP-AO-Wn0"/>
+                        <outlet property="subViewImage" destination="KYs-ST-jSe" id="GSl-CY-9Q9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fH-ae-ZVi" userLabel="First Responder" sceneMemberID="firstResponder"/>

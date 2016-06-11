@@ -99,7 +99,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     // カメラの撮影開始
-    @IBAction func cameraStart(sender : AnyObject) {
+    @IBAction func camera_>?<m
+    ]Start(sender : AnyObject) {
         
         let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
         // カメラが利用可能かチェック
