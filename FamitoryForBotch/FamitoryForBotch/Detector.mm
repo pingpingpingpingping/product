@@ -16,8 +16,6 @@
 @implementation Detector: NSObject
 - (UIImage *)trimObject:(UIImage *)image{
     
-    
-    
     cv::Mat mat;
     UIImageToMat(image, mat);
     //    NSLog(@"mat rows:%", mat.rows);
@@ -122,11 +120,16 @@
     
     //    cv::Mat dst_img2(mat.rows, mat.cols, cut_img.type());
     //    cv::resize(cut_img, dst_img2, dst_img2.size(), cv::INTER_CUBIC);
+    /*
     for (int i = 0; i < roiCnt; i++){
         std::cout << "i: " << i << "roi.row: "<<roi[i].rows << std::endl;
     }
+     */
+    
+    std::cout<< "image " << grayImage.cols << " " << grayImage.rows << std::endl;
+    
     cv::Mat test(grayImage.cols, grayImage.rows, grayImage.type());
-    test = binImage;
+    test = grayImage;
     UIImage *resultImage = MatToUIImage(test);
     
     std::cout << resultImage.size.width;
