@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE68EA7C1CAF8E7900F3ED17"
-               BuildableName = "UIPageViewControllerSample.app"
-               BlueprintName = "UIPageViewControllerSample"
-               ReferencedContainer = "container:UIPageViewControllerSample.xcodeproj">
+               BuildableName = "combinedViewCon.app"
+               BlueprintName = "combinedViewCon"
+               ReferencedContainer = "container:combinedViewCon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE68EA901CAF8E7A00F3ED17"
-               BuildableName = "UIPageViewControllerSampleTests.xctest"
-               BlueprintName = "UIPageViewControllerSampleTests"
-               ReferencedContainer = "container:UIPageViewControllerSample.xcodeproj">
+               BuildableName = "combinedViewCon.xctest"
+               BlueprintName = "combinedViewConTests"
+               ReferencedContainer = "container:combinedViewCon.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE68EA9B1CAF8E7A00F3ED17"
-               BuildableName = "UIPageViewControllerSampleUITests.xctest"
-               BlueprintName = "UIPageViewControllerSampleUITests"
-               ReferencedContainer = "container:UIPageViewControllerSample.xcodeproj">
+               BuildableName = "combinedViewCon.xctest"
+               BlueprintName = "combinedViewConUITests"
+               ReferencedContainer = "container:combinedViewCon.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE68EA7C1CAF8E7900F3ED17"
-            BuildableName = "UIPageViewControllerSample.app"
-            BlueprintName = "UIPageViewControllerSample"
-            ReferencedContainer = "container:UIPageViewControllerSample.xcodeproj">
+            BuildableName = "combinedViewCon.app"
+            BlueprintName = "combinedViewCon"
+            ReferencedContainer = "container:combinedViewCon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE68EA7C1CAF8E7900F3ED17"
-            BuildableName = "UIPageViewControllerSample.app"
-            BlueprintName = "UIPageViewControllerSample"
-            ReferencedContainer = "container:UIPageViewControllerSample.xcodeproj">
+            BuildableName = "combinedViewCon.app"
+            BlueprintName = "combinedViewCon"
+            ReferencedContainer = "container:combinedViewCon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE68EA7C1CAF8E7900F3ED17"
-            BuildableName = "UIPageViewControllerSample.app"
-            BlueprintName = "UIPageViewControllerSample"
-            ReferencedContainer = "container:UIPageViewControllerSample.xcodeproj">
+            BuildableName = "combinedViewCon.app"
+            BlueprintName = "combinedViewCon"
+            ReferencedContainer = "container:combinedViewCon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

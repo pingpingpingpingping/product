@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130005521D0B6683008EF193 /* subViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130005511D0B6683008EF193 /* subViewController.swift */; };
+		1300055F1D0B67F2008EF193 /* noEggLogoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1300055D1D0B67F2008EF193 /* noEggLogoBlack.png */; };
+		130005601D0B67F2008EF193 /* noEggLogoSkyBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1300055E1D0B67F2008EF193 /* noEggLogoSkyBlue.png */; };
+		130005621D0B67FE008EF193 /* noEggLogoGreenFill.png in Resources */ = {isa = PBXBuildFile; fileRef = 130005611D0B67FE008EF193 /* noEggLogoGreenFill.png */; };
 		131D231A1D0A8E0600721C1C /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131D23191D0A8E0600721C1C /* FirstTableViewController.swift */; };
 		131D231C1D0A9BEA00721C1C /* subViewOfTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131D231B1D0A9BEA00721C1C /* subViewOfTableCell.swift */; };
 		133686D81D0B5EAF00A46A38 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 133686D71D0B5EAF00A46A38 /* 120.png */; };
@@ -47,23 +51,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130005511D0B6683008EF193 /* subViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = subViewController.swift; sourceTree = "<group>"; };
+		1300055D1D0B67F2008EF193 /* noEggLogoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noEggLogoBlack.png; sourceTree = "<group>"; };
+		1300055E1D0B67F2008EF193 /* noEggLogoSkyBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noEggLogoSkyBlue.png; sourceTree = "<group>"; };
+		130005611D0B67FE008EF193 /* noEggLogoGreenFill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noEggLogoGreenFill.png; sourceTree = "<group>"; };
 		131D23191D0A8E0600721C1C /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
 		131D231B1D0A9BEA00721C1C /* subViewOfTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = subViewOfTableCell.swift; sourceTree = "<group>"; };
 		133686D71D0B5EAF00A46A38 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		133686D91D0B5EBB00A46A38 /* full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full.png; sourceTree = "<group>"; };
 		133686DA1D0B5EBB00A46A38 /* fullLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullLogo.png; sourceTree = "<group>"; };
 		13B6F5571D093D900053E70F /* FirstTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
-		DE68EA7D1CAF8E7900F3ED17 /* UIPageViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPageViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE68EA7D1CAF8E7900F3ED17 /* combinedViewCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = combinedViewCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE68EA801CAF8E7A00F3ED17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE68EA821CAF8E7A00F3ED17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE68EA851CAF8E7A00F3ED17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE68EA871CAF8E7A00F3ED17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE68EA8A1CAF8E7A00F3ED17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE68EA8C1CAF8E7A00F3ED17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE68EA911CAF8E7A00F3ED17 /* UIPageViewControllerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPageViewControllerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE68EA911CAF8E7A00F3ED17 /* combinedViewCon.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = combinedViewCon.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE68EA951CAF8E7A00F3ED17 /* UIPageViewControllerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerSampleTests.swift; sourceTree = "<group>"; };
 		DE68EA971CAF8E7A00F3ED17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE68EA9C1CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPageViewControllerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE68EA9C1CAF8E7A00F3ED17 /* combinedViewCon.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = combinedViewCon.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE68EAA01CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerSampleUITests.swift; sourceTree = "<group>"; };
 		DE68EAA21CAF8E7A00F3ED17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE68EAAF1CAFFE5F00F3ED17 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,9 @@
 		133686DD1D0B5EC800A46A38 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				130005611D0B67FE008EF193 /* noEggLogoGreenFill.png */,
+				1300055D1D0B67F2008EF193 /* noEggLogoBlack.png */,
+				1300055E1D0B67F2008EF193 /* noEggLogoSkyBlue.png */,
 				133686D71D0B5EAF00A46A38 /* 120.png */,
 				133686D91D0B5EBB00A46A38 /* full.png */,
 				133686DA1D0B5EBB00A46A38 /* fullLogo.png */,
@@ -122,9 +133,9 @@
 		DE68EA7E1CAF8E7900F3ED17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE68EA7D1CAF8E7900F3ED17 /* UIPageViewControllerSample.app */,
-				DE68EA911CAF8E7A00F3ED17 /* UIPageViewControllerSampleTests.xctest */,
-				DE68EA9C1CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests.xctest */,
+				DE68EA7D1CAF8E7900F3ED17 /* combinedViewCon.app */,
+				DE68EA911CAF8E7A00F3ED17 /* combinedViewCon.xctest */,
+				DE68EA9C1CAF8E7A00F3ED17 /* combinedViewCon.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 		DE68EAAE1CAFFE2400F3ED17 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				130005511D0B6683008EF193 /* subViewController.swift */,
 				131D231B1D0A9BEA00721C1C /* subViewOfTableCell.swift */,
 				131D23191D0A8E0600721C1C /* FirstTableViewController.swift */,
 				DE68EAAF1CAFFE5F00F3ED17 /* FirstViewController.swift */,
@@ -181,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE68EA7C1CAF8E7900F3ED17 /* UIPageViewControllerSample */ = {
+		DE68EA7C1CAF8E7900F3ED17 /* combinedViewCon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE68EAA51CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "UIPageViewControllerSample" */;
+			buildConfigurationList = DE68EAA51CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "combinedViewCon" */;
 			buildPhases = (
 				DE68EA791CAF8E7900F3ED17 /* Sources */,
 				DE68EA7A1CAF8E7900F3ED17 /* Frameworks */,
@@ -193,14 +205,14 @@
 			);
 			dependencies = (
 			);
-			name = UIPageViewControllerSample;
+			name = combinedViewCon;
 			productName = UIPageViewControllerSample;
-			productReference = DE68EA7D1CAF8E7900F3ED17 /* UIPageViewControllerSample.app */;
+			productReference = DE68EA7D1CAF8E7900F3ED17 /* combinedViewCon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DE68EA901CAF8E7A00F3ED17 /* UIPageViewControllerSampleTests */ = {
+		DE68EA901CAF8E7A00F3ED17 /* combinedViewConTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE68EAA81CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "UIPageViewControllerSampleTests" */;
+			buildConfigurationList = DE68EAA81CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "combinedViewConTests" */;
 			buildPhases = (
 				DE68EA8D1CAF8E7A00F3ED17 /* Sources */,
 				DE68EA8E1CAF8E7A00F3ED17 /* Frameworks */,
@@ -211,14 +223,14 @@
 			dependencies = (
 				DE68EA931CAF8E7A00F3ED17 /* PBXTargetDependency */,
 			);
-			name = UIPageViewControllerSampleTests;
+			name = combinedViewConTests;
 			productName = UIPageViewControllerSampleTests;
-			productReference = DE68EA911CAF8E7A00F3ED17 /* UIPageViewControllerSampleTests.xctest */;
+			productReference = DE68EA911CAF8E7A00F3ED17 /* combinedViewCon.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DE68EA9B1CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests */ = {
+		DE68EA9B1CAF8E7A00F3ED17 /* combinedViewConUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE68EAAB1CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "UIPageViewControllerSampleUITests" */;
+			buildConfigurationList = DE68EAAB1CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "combinedViewConUITests" */;
 			buildPhases = (
 				DE68EA981CAF8E7A00F3ED17 /* Sources */,
 				DE68EA991CAF8E7A00F3ED17 /* Frameworks */,
@@ -229,9 +241,9 @@
 			dependencies = (
 				DE68EA9E1CAF8E7A00F3ED17 /* PBXTargetDependency */,
 			);
-			name = UIPageViewControllerSampleUITests;
+			name = combinedViewConUITests;
 			productName = UIPageViewControllerSampleUITests;
-			productReference = DE68EA9C1CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests.xctest */;
+			productReference = DE68EA9C1CAF8E7A00F3ED17 /* combinedViewCon.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE68EA781CAF8E7900F3ED17 /* Build configuration list for PBXProject "UIPageViewControllerSample" */;
+			buildConfigurationList = DE68EA781CAF8E7900F3ED17 /* Build configuration list for PBXProject "combinedViewCon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -271,9 +283,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE68EA7C1CAF8E7900F3ED17 /* UIPageViewControllerSample */,
-				DE68EA901CAF8E7A00F3ED17 /* UIPageViewControllerSampleTests */,
-				DE68EA9B1CAF8E7A00F3ED17 /* UIPageViewControllerSampleUITests */,
+				DE68EA7C1CAF8E7900F3ED17 /* combinedViewCon */,
+				DE68EA901CAF8E7A00F3ED17 /* combinedViewConTests */,
+				DE68EA9B1CAF8E7A00F3ED17 /* combinedViewConUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,12 +295,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130005621D0B67FE008EF193 /* noEggLogoGreenFill.png in Resources */,
 				133686D81D0B5EAF00A46A38 /* 120.png in Resources */,
 				133686DB1D0B5EBB00A46A38 /* full.png in Resources */,
+				1300055F1D0B67F2008EF193 /* noEggLogoBlack.png in Resources */,
 				133686DC1D0B5EBB00A46A38 /* fullLogo.png in Resources */,
 				DE68EA8B1CAF8E7A00F3ED17 /* LaunchScreen.storyboard in Resources */,
 				DE68EA881CAF8E7A00F3ED17 /* Assets.xcassets in Resources */,
 				DE68EA861CAF8E7A00F3ED17 /* Main.storyboard in Resources */,
+				130005601D0B67F2008EF193 /* noEggLogoSkyBlue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +335,7 @@
 				131D231A1D0A8E0600721C1C /* FirstTableViewController.swift in Sources */,
 				DE68EABA1CB0053D00F3ED17 /* SixthViewController.swift in Sources */,
 				DE68EAB41CB004FC00F3ED17 /* ThirdViewController.swift in Sources */,
+				130005521D0B6683008EF193 /* subViewController.swift in Sources */,
 				DE68EA831CAF8E7A00F3ED17 /* ViewController.swift in Sources */,
 				DE68EA811CAF8E7A00F3ED17 /* AppDelegate.swift in Sources */,
 				DE68EAB81CB0052600F3ED17 /* FifthViewController.swift in Sources */,
@@ -349,12 +365,12 @@
 /* Begin PBXTargetDependency section */
 		DE68EA931CAF8E7A00F3ED17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DE68EA7C1CAF8E7900F3ED17 /* UIPageViewControllerSample */;
+			target = DE68EA7C1CAF8E7900F3ED17 /* combinedViewCon */;
 			targetProxy = DE68EA921CAF8E7A00F3ED17 /* PBXContainerItemProxy */;
 		};
 		DE68EA9E1CAF8E7A00F3ED17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DE68EA7C1CAF8E7900F3ED17 /* UIPageViewControllerSample */;
+			target = DE68EA7C1CAF8E7900F3ED17 /* combinedViewCon */;
 			targetProxy = DE68EA9D1CAF8E7A00F3ED17 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -470,8 +486,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UIPageViewControllerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.sugimon.UIPageViewControllerSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sugimon.combinedViewCon;
+				PRODUCT_NAME = combinedViewCon;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -485,8 +501,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UIPageViewControllerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.sugimon.UIPageViewControllerSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sugimon.combinedViewCon;
+				PRODUCT_NAME = combinedViewCon;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -499,8 +515,8 @@
 				INFOPLIST_FILE = UIPageViewControllerSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.UIPageViewControllerSampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIPageViewControllerSample.app/UIPageViewControllerSample";
+				PRODUCT_NAME = combinedViewCon;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/combinedViewCon.app/combinedViewCon";
 			};
 			name = Debug;
 		};
@@ -511,8 +527,8 @@
 				INFOPLIST_FILE = UIPageViewControllerSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.UIPageViewControllerSampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIPageViewControllerSample.app/UIPageViewControllerSample";
+				PRODUCT_NAME = combinedViewCon;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/combinedViewCon.app/combinedViewCon";
 			};
 			name = Release;
 		};
@@ -522,7 +538,7 @@
 				INFOPLIST_FILE = UIPageViewControllerSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.UIPageViewControllerSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = combinedViewCon;
 				TEST_TARGET_NAME = UIPageViewControllerSample;
 			};
 			name = Debug;
@@ -533,7 +549,7 @@
 				INFOPLIST_FILE = UIPageViewControllerSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.UIPageViewControllerSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = combinedViewCon;
 				TEST_TARGET_NAME = UIPageViewControllerSample;
 			};
 			name = Release;
@@ -541,7 +557,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE68EA781CAF8E7900F3ED17 /* Build configuration list for PBXProject "UIPageViewControllerSample" */ = {
+		DE68EA781CAF8E7900F3ED17 /* Build configuration list for PBXProject "combinedViewCon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE68EAA31CAF8E7A00F3ED17 /* Debug */,
@@ -550,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE68EAA51CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "UIPageViewControllerSample" */ = {
+		DE68EAA51CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "combinedViewCon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE68EAA61CAF8E7A00F3ED17 /* Debug */,
@@ -559,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE68EAA81CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "UIPageViewControllerSampleTests" */ = {
+		DE68EAA81CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "combinedViewConTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE68EAA91CAF8E7A00F3ED17 /* Debug */,
@@ -568,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE68EAAB1CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "UIPageViewControllerSampleUITests" */ = {
+		DE68EAAB1CAF8E7A00F3ED17 /* Build configuration list for PBXNativeTarget "combinedViewConUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE68EAAC1CAF8E7A00F3ED17 /* Debug */,

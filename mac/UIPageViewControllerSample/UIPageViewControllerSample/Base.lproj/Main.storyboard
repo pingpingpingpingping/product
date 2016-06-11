@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -73,7 +73,7 @@
         <!--First View Controller-->
         <scene sceneID="OP6-VU-UuS">
             <objects>
-                <viewController storyboardIdentifier="FirstViewController" id="dL6-dj-Cc7" customClass="FirstViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="dL6-dj-Cc7" customClass="FirstViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5E8-YK-eIU"/>
                         <viewControllerLayoutGuide type="bottom" id="4wh-To-Hdt"/>
@@ -294,7 +294,7 @@
         <!--Second View Controller-->
         <scene sceneID="OuT-Nx-tma">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="SYm-10-LNf" customClass="SecondViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="SYm-10-LNf" customClass="SecondViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yv2-YU-g11"/>
                         <viewControllerLayoutGuide type="bottom" id="PNi-rq-EPd"/>
@@ -328,7 +328,7 @@
         <!--Third View Controller-->
         <scene sceneID="UIo-ir-5Yq">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="H0J-lV-MQj" customClass="ThirdViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="H0J-lV-MQj" customClass="ThirdViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c8d-fS-OLa"/>
                         <viewControllerLayoutGuide type="bottom" id="yWc-Es-6Ov"/>
@@ -362,7 +362,7 @@
         <!--Fourth View Controller-->
         <scene sceneID="7Rk-d9-AeW">
             <objects>
-                <viewController storyboardIdentifier="FourthViewController" id="ZYB-fq-tSI" customClass="FourthViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FourthViewController" id="ZYB-fq-tSI" customClass="FourthViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PXb-Lg-dQX"/>
                         <viewControllerLayoutGuide type="bottom" id="444-px-Hym"/>
@@ -396,7 +396,7 @@
         <!--Fifth View Controller-->
         <scene sceneID="c9o-YB-NSs">
             <objects>
-                <viewController storyboardIdentifier="FifthViewController" id="XoG-et-2j9" customClass="FifthViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FifthViewController" id="XoG-et-2j9" customClass="FifthViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DBJ-tL-fc7"/>
                         <viewControllerLayoutGuide type="bottom" id="tpk-xF-o5O"/>
@@ -430,7 +430,7 @@
         <!--Sixth View Controller-->
         <scene sceneID="upS-nB-Dvq">
             <objects>
-                <viewController storyboardIdentifier="SixthViewController" id="Mm7-ge-GO7" customClass="SixthViewController" customModule="UIPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SixthViewController" id="Mm7-ge-GO7" customClass="SixthViewController" customModule="combinedViewCon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="daR-1E-sxl"/>
                         <viewControllerLayoutGuide type="bottom" id="gUZ-XJ-gHo"/>
