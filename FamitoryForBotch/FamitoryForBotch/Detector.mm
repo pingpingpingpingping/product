@@ -16,8 +16,6 @@
 @implementation Detector: NSObject
 - (UIImage *)trimObject:(UIImage *)image{
     
-    
-    
     cv::Mat_<double> mat;
     UIImageToMat(image, mat);
     //    NSLog(@"mat rows:%", mat.rows);
