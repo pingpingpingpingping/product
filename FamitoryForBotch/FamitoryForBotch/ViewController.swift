@@ -28,7 +28,10 @@ class ViewController: UIViewController {
     let detector = Detector()
     
     @IBAction func tapButton(sender: AnyObject) {
-        self.detector.trimObject(image);
+        //ボタンが押された時の処理
+        //画像をDetector.mmに送り、物体を検出し顔を描画する。
+//        let characterImage : UIImage?
+          self.image = self.detector.trimObject(self.image);
     }
 
     override func viewDidLoad() {
@@ -132,6 +135,18 @@ class ViewController: UIViewController {
             self.imageView.image = self.detector.trimObject(self.image);
         })
     }
+    
+    //TalkViewControllerに画像を渡すために、Sequeのやつをオーバーライド
+    override func prepareForSeque(seque: UIStoryboardSeque, sender: AnyObject?){
+        var ViewController2 = seque.destinationViewController as! TalkViewController
+        ViewController2.charaImage = self.image;
+    }
+    
+    
+    
+    
+    
+    
 
 
 
