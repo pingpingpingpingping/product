@@ -15,6 +15,7 @@
 		130005851D0BEBC7008EF193 /* FamitoryForBotchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130005841D0BEBC7008EF193 /* FamitoryForBotchTests.swift */; };
 		130005901D0BEBC8008EF193 /* FamitoryForBotchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1300058F1D0BEBC8008EF193 /* FamitoryForBotchUITests.swift */; };
 		4A994FFB1D0BF62600B5DE71 /* Detector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A994FF91D0BF62600B5DE71 /* Detector.mm */; };
+		822564F31D0C6D6500311F6D /* parts in Resources */ = {isa = PBXBuildFile; fileRef = 822564F21D0C6D6500311F6D /* parts */; };
 		822A37E11D0C08DF002215EF /* CameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A37E01D0C08DF002215EF /* CameraUtil.swift */; };
 		822A37E31D0C4262002215EF /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A37E21D0C4262002215EF /* TalkViewController.swift */; };
 		E8EF7036B92A5E7703B5A0EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6473277120F0EF76E06AE4D4 /* Pods.framework */; };
@@ -56,6 +57,7 @@
 		4A994FF91D0BF62600B5DE71 /* Detector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Detector.mm; sourceTree = "<group>"; };
 		5EA360E5E785016AD1989A87 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6473277120F0EF76E06AE4D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		822564F21D0C6D6500311F6D /* parts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = parts; sourceTree = SOURCE_ROOT; };
 		822A37E01D0C08DF002215EF /* CameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUtil.swift; sourceTree = "<group>"; };
 		822A37E21D0C4262002215EF /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 		130005631D0BEBC7008EF193 = {
 			isa = PBXGroup;
 			children = (
+				822564F21D0C6D6500311F6D /* parts */,
 				1300056E1D0BEBC7008EF193 /* FamitoryForBotch */,
 				130005831D0BEBC7008EF193 /* FamitoryForBotchTests */,
 				1300058E1D0BEBC8008EF193 /* FamitoryForBotchUITests */,
@@ -273,6 +276,7 @@
 				1300057A1D0BEBC7008EF193 /* LaunchScreen.storyboard in Resources */,
 				130005771D0BEBC7008EF193 /* Assets.xcassets in Resources */,
 				130005751D0BEBC7008EF193 /* Main.storyboard in Resources */,
+				822564F31D0C6D6500311F6D /* parts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
