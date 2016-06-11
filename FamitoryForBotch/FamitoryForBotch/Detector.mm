@@ -14,6 +14,7 @@
 }
 @end
 @implementation Detector: NSObject
+
 - (UIImage *)trimObject:(UIImage *)image{
     
     cv::Mat mat;
@@ -125,6 +126,8 @@
         std::cout << "i: " << i << "roi.row: "<<roi[i].rows << std::endl;
     }
      */
+    
+    cv::Mat addFace_img = addFace(cut_img);
     
     std::cout<< "image " << grayImage.cols << " " << grayImage.rows << std::endl;
     
