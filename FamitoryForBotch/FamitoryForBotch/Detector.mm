@@ -19,9 +19,6 @@
     
     cv::Mat mat;
     UIImageToMat(image, mat);
-    //    NSLog(@"mat rows:%", mat.rows);
-    
-//    cv::Mat test(mat.cols, mat.rows, mat.type());
     
     //このサイズにオベジェクトがある想定。トリミング
     
@@ -30,14 +27,10 @@
     int size_x = 300;
     int size_y = 300;
     
-    cv::Rect obj_rect = cv::Rect(margin_x, margin_y, size_x,  size_y);
-    cv::Mat cut_img(size_x, size_y, mat.type());
+    cv::Mat cut_img = mat.clone();
     
-    for(int y=0; y<cut_img.rows; y++){
-        for(int x=0; x<cut_img.cols; x++){
-            cut_img.at<cv::Vec3b>(y,x) = mat.at<cv::Vec3b>(margin_y + y, margin_x + x);
-        }
-    }
+    cv::Mat test(cut_img.cols, cut_img.rows, cut_img.type());
+    test = cut_img.clone();
     
     //グレースケール
     cv::Mat grayImage,binImage;
@@ -95,7 +88,7 @@
             roi[roiCnt] = cv::Mat(cut_img, brect);
             
             //入力画像に表示する場合
-            cv::drawContours(cut_img, contours, i, CV_RGB(0, 0, 255), 4);
+            //cv::drawContours(cut_img, contours, i, CV_RGB(0, 0, 255), 4);
             
             //表示
             //cv::imshow("label" + std::to_string(roiCnt+1), roi[roiCnt]);
@@ -112,150 +105,158 @@
         i++;
     }
     
-    //全体を表示する場合
-    //cv::imshow("coun", cut_img);
-    
-    //    imgMatWrite = cut_img;
-    
-    //UIImage *resultImage = MatToUIImage(cut_img);
-    
-    //    cv::Mat dst_img2(mat.rows, mat.cols, cut_img.type());
-    //    cv::resize(cut_img, dst_img2, dst_img2.size(), cv::INTER_CUBIC);
-    /*
-    for (int i = 0; i < roiCnt; i++){
-        std::cout << "i: " << i << "roi.row: "<<roi[i].rows << std::endl;
-    }
-     */
-    
-    cv::Mat addFace_img = [self addFace:cut_img];
-//    addFace(cut_img);
+        cv::Mat addFace_img = [self addFace:cut_img];
     
     std::cout<< "image " << grayImage.cols << " " << grayImage.rows << std::endl;
     
-    cv::Mat test(grayImage.cols, grayImage.rows, grayImage.type());
-    test = grayImage;
-    UIImage *resultImage = MatToUIImage(test);
+    //cv::Mat test(grayImage.cols, grayImage.rows, grayImage.type());
+    //test = grayImage;
+    UIImage *resultImage = MatToUIImage(addFace_img);
     
     std::cout << resultImage.size.width;
     return resultImage;
     
 }
 
+- (cv::Mat) loadMatFromFile:(NSString *)filename{
+    NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSString* path = [resourcePath stringByAppendingPathComponent:filename];
+    const char* pathChars = [path UTF8String];
+    return cv::imread(pathChars);
+}
+
+
+
 - (cv::Mat)addFace:(cv::Mat)mat{
     
     //output image
-    int margin_x = 80;
-    int margin_y = 80;
+    int margin_x = 0;
+    int margin_y = 0;
     cv::Mat output(mat.cols + margin_x, mat.rows + margin_y, mat.type());
     
     for(int y = 0; y < mat.rows; y++){
         for(int x = 0; x < mat.cols; x++){
-            output.at<cv::Vec3b>(y + margin_y/2, x + margin_x) = mat.at<cv::Vec3b>(y,x);
+            output.at<cv::Vec3b>(y + margin_y/2, x + margin_x/2) = mat.at<cv::Vec3b>(y,x);
         }
     }
-    std::string path = "./parts";
     
     //import filename
-    std::string file_lefteye = path + "/lefteye.png";
-    std::string file_righteye = path + "/righteye.png";
-    std::string file_nose = path + "/nose.png";
-    std::string file_mouse = path + "/mouse.png";
-    std::string file_lefthand = path + "/lefthand.png";
-    std::string file_righthand = path + "/righthand.png";
-    std::string file_leftfoot = path + "/leftfoot.png";
-    std::string file_rightfoot = path + "/rightfoot.png";
+    NSString *file_lefteye = @"./parts/lefteye.png";
+    NSString *file_righteye = @"./parts/righteye.png";
+    NSString *file_nose = @"./parts/nose.png";
+    NSString *file_mouse = @"./parts/mouse.png";
+    NSString *file_lefthand = @"./parts/lefthand.png";
+    NSString *file_righthand = @"./parts/righthand.png";
+    NSString *file_leftfoot = @"./parts/leftfoot.png";
+    NSString *file_rightfoot = @"./parts/rightfoot.png";
     
     //left eye
-    cv::Mat lefteye = cv::imread(file_lefteye);
+    cv::Mat lefteye = [self loadMatFromFile:file_lefteye];
     std::cout << "left eye " << lefteye.cols << " " << lefteye.rows << std::endl;
-    cv::resize(lefteye, lefteye, cv::Size(20,20));
+    cv::resize(lefteye, lefteye, cv::Size(40,40));
 
     //right eye
-    cv::Mat righteye = cv::imread(file_righteye);
-    cv::resize(righteye, righteye, cv::Size(20,20));
+    cv::Mat righteye = [self loadMatFromFile:file_righteye];
+    cv::resize(righteye, righteye, cv::Size(40,40));
     
     //nose
-    cv::Mat nose = cv::imread(file_nose);
-    cv::resize(nose, nose, cv::Size(20,20));
+    cv::Mat nose = [self loadMatFromFile:file_nose];
+    cv::resize(nose, nose, cv::Size(40,40));
     
     //mouse
-    cv::Mat mouse = cv::imread(file_mouse);
-    cv::resize(mouse, mouse, cv::Size(20,20));
+    cv::Mat mouse = [self loadMatFromFile:file_mouse];
+    cv::resize(mouse, mouse, cv::Size(100,40));
     
     //left hand
-    cv::Mat lefthand = cv::imread(file_lefthand);
-    cv::resize(lefthand, lefthand, cv::Size(20,20));
+    cv::Mat lefthand = [self loadMatFromFile:file_lefthand];
+    cv::resize(lefthand, lefthand, cv::Size(40,40));
     
     //left foot
-    cv::Mat leftfoot = cv::imread(file_leftfoot);
-    cv::resize(leftfoot, leftfoot, cv::Size(20,20));
+    cv::Mat leftfoot = [self loadMatFromFile:file_leftfoot];
+    cv::resize(leftfoot, leftfoot, cv::Size(40,40));
     
     //right hand
-    cv::Mat righthand = cv::imread(file_righthand);
-    cv::resize(righthand, righthand, cv::Size(20,20));
+    cv::Mat righthand = [self loadMatFromFile:file_righthand];
+    cv::resize(righthand, righthand, cv::Size(40,40));
     
     //left foot
-    cv::Mat rightfoot = cv::imread(file_rightfoot);
-    cv::resize(rightfoot, rightfoot, cv::Size(20,20));
+    cv::Mat rightfoot = [self loadMatFromFile:file_rightfoot];
+    cv::resize(rightfoot, rightfoot, cv::Size(40,40));
     
     //position of all parts
-    cv::Point pos_lefteye(200,0);
-    cv::Point pos_righteye(280,0);
-    cv::Point pos_nose(220,50);
-    cv::Point pos_mouse(220,100);
-    cv::Point pos_lefthand(0,150);
-    cv::Point pos_leftfoot(200,300);
-    cv::Point pos_righthand(280,150);
-    cv::Point pos_rightfoot(250, 300);
+    cv::Point pos_lefteye(50,0);
+    cv::Point pos_righteye(130,0);
+    cv::Point pos_nose(90,40);
+    cv::Point pos_mouse(60,70);
+    cv::Point pos_lefthand(0,120);
+    cv::Point pos_leftfoot(0,250);
+    cv::Point pos_righthand(175,120);
+    cv::Point pos_rightfoot(175, 250);
     
     //place all parts
     
     //left eye
-    for(int y=0; y<nose.rows; y++){
-        for(int x=0; x<nose.rows; x++){
-            output.at<cv::Vec3b>(y+pos_nose.y, x+pos_nose.x) = nose.at<cv::Vec3b>(y,x);
+    for(int y=0; y<lefteye.rows; y++){
+        for(int x=0; x<lefteye.cols; x++){
+            if(lefteye.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_lefteye.y, x+pos_lefteye.x) = lefteye.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //right eye
     for(int y=0; y<righteye.rows; y++){
-        for(int x=0; x<righteye.rows; x++){
-            output.at<cv::Vec3b>(y+pos_righteye.y, x+pos_righteye.x) = righteye.at<cv::Vec3b>(y,x);
+        for(int x=0; x<righteye.cols; x++){
+            if(righteye.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_righteye.y, x+pos_righteye.x) = righteye.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //nose
     for(int y=0; y<nose.rows; y++){
-        for(int x=0; x<nose.rows; x++){
-            output.at<cv::Vec3b>(y+pos_nose.y, x+pos_nose.x) = nose.at<cv::Vec3b>(y,x);
+        for(int x=0; x<nose.cols; x++){
+            if(nose.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_nose.y, x+pos_nose.x) = nose.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //mouse
     for(int y=0; y<mouse.rows; y++){
-        for(int x=0; x<mouse.rows; x++){
-            output.at<cv::Vec3b>(y+pos_mouse.y, x+pos_mouse.x) = mouse.at<cv::Vec3b>(y,x);
+        for(int x=0; x<mouse.cols; x++){
+            if(mouse.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_mouse.y, x+pos_mouse.x) = mouse.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //left hand
     for(int y=0; y<lefthand.rows; y++){
-        for(int x=0; x<lefthand.rows; x++){
-            output.at<cv::Vec3b>(y+pos_lefthand.y, x+pos_lefthand.x) = lefthand.at<cv::Vec3b>(y,x);
+        for(int x=0; x<lefthand.cols; x++){
+            if(lefthand.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_lefthand.y, x+pos_lefthand.x) = lefthand.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //left foot
     for(int y=0; y<leftfoot.rows; y++){
-        for(int x=0; x<leftfoot.rows; x++){
-            output.at<cv::Vec3b>(y+pos_leftfoot.y, x+pos_leftfoot.x) = leftfoot.at<cv::Vec3b>(y,x);
+        for(int x=0; x<leftfoot.cols; x++){
+            if(leftfoot.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_leftfoot.y, x+pos_leftfoot.x) = leftfoot.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //right hand
     for(int y=0; y<righthand.rows; y++){
-        for(int x=0; x<righthand.rows; x++){
-            output.at<cv::Vec3b>(y+pos_righthand.y, x+pos_righthand.x) = righthand.at<cv::Vec3b>(y,x);
+        for(int x=0; x<righthand.cols; x++){
+            if(righthand.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_righthand.y, x+pos_righthand.x) = righthand.at<cv::Vec3b>(y,x);
+            }
         }
     }
     //right foot
     for(int y=0; y<rightfoot.rows; y++){
-        for(int x=0; x<rightfoot.rows; x++){
-            output.at<cv::Vec3b>(y+pos_rightfoot.y, x+pos_rightfoot.x) = rightfoot.at<cv::Vec3b>(y,x);
+        for(int x=0; x<rightfoot.cols; x++){
+            if(rightfoot.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_rightfoot.y, x+pos_rightfoot.x) = rightfoot.at<cv::Vec3b>(y,x);
+            }
         }
     }
     
