@@ -14,6 +14,8 @@
 		1300057A1D0BEBC7008EF193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130005781D0BEBC7008EF193 /* LaunchScreen.storyboard */; };
 		130005851D0BEBC7008EF193 /* FamitoryForBotchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130005841D0BEBC7008EF193 /* FamitoryForBotchTests.swift */; };
 		130005901D0BEBC8008EF193 /* FamitoryForBotchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1300058F1D0BEBC8008EF193 /* FamitoryForBotchUITests.swift */; };
+		4A994FFB1D0BF62600B5DE71 /* Detector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A994FF91D0BF62600B5DE71 /* Detector.mm */; };
+		E8EF7036B92A5E7703B5A0EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6473277120F0EF76E06AE4D4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,11 @@
 		1300058B1D0BEBC8008EF193 /* FamitoryForBotchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamitoryForBotchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1300058F1D0BEBC8008EF193 /* FamitoryForBotchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamitoryForBotchUITests.swift; sourceTree = "<group>"; };
 		130005911D0BEBC8008EF193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309EE547FD6824F147ED50CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4A994FF81D0BF62600B5DE71 /* FamitoryForBotch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FamitoryForBotch-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A994FF91D0BF62600B5DE71 /* Detector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Detector.mm; sourceTree = "<group>"; };
+		5EA360E5E785016AD1989A87 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6473277120F0EF76E06AE4D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EF7036B92A5E7703B5A0EA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,8 @@
 				130005831D0BEBC7008EF193 /* FamitoryForBotchTests */,
 				1300058E1D0BEBC8008EF193 /* FamitoryForBotchUITests */,
 				1300056D1D0BEBC7008EF193 /* Products */,
+				1FE7124B8CB8C5F8B997C821 /* Pods */,
+				850F1F532D54E62F7A47346A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +113,8 @@
 				130005761D0BEBC7008EF193 /* Assets.xcassets */,
 				130005781D0BEBC7008EF193 /* LaunchScreen.storyboard */,
 				1300057B1D0BEBC7008EF193 /* Info.plist */,
+				4A994FF91D0BF62600B5DE71 /* Detector.mm */,
+				4A994FF81D0BF62600B5DE71 /* FamitoryForBotch-Bridging-Header.h */,
 			);
 			path = FamitoryForBotch;
 			sourceTree = "<group>";
@@ -125,6 +137,23 @@
 			path = FamitoryForBotchUITests;
 			sourceTree = "<group>";
 		};
+		1FE7124B8CB8C5F8B997C821 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				309EE547FD6824F147ED50CD /* Pods.debug.xcconfig */,
+				5EA360E5E785016AD1989A87 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		850F1F532D54E62F7A47346A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6473277120F0EF76E06AE4D4 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 130005941D0BEBC8008EF193 /* Build configuration list for PBXNativeTarget "FamitoryForBotch" */;
 			buildPhases = (
+				5747E7230DCF5408E11A80AC /* Check Pods Manifest.lock */,
 				130005681D0BEBC7008EF193 /* Sources */,
 				130005691D0BEBC7008EF193 /* Frameworks */,
 				1300056A1D0BEBC7008EF193 /* Resources */,
+				F5CB6076B1EB202E40F2B851 /* Embed Pods Frameworks */,
+				A2E1B8F8325F1D7742AE5E9C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +286,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5747E7230DCF5408E11A80AC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E1B8F8325F1D7742AE5E9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5CB6076B1EB202E40F2B851 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		130005681D0BEBC7008EF193 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				130005721D0BEBC7008EF193 /* ViewController.swift in Sources */,
+				4A994FFB1D0BF62600B5DE71 /* Detector.mm in Sources */,
 				130005701D0BEBC7008EF193 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,25 +481,34 @@
 		};
 		130005951D0BEBC8008EF193 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 309EE547FD6824F147ED50CD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FamitoryForBotch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ping.FamitoryForBotch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FamitoryForBotch/FamitoryForBotch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		130005961D0BEBC8008EF193 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA360E5E785016AD1989A87 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FamitoryForBotch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ping.FamitoryForBotch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FamitoryForBotch/FamitoryForBotch-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -487,6 +577,7 @@
 				130005961D0BEBC8008EF193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		130005971D0BEBC8008EF193 /* Build configuration list for PBXNativeTarget "FamitoryForBotchTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +586,7 @@
 				130005991D0BEBC8008EF193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1300059A1D0BEBC8008EF193 /* Build configuration list for PBXNativeTarget "FamitoryForBotchUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +595,7 @@
 				1300059C1D0BEBC8008EF193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

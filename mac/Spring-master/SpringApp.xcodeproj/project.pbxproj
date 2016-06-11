@@ -105,7 +105,7 @@
 		1A4FDA3D1A6E44780099D309 /* SpringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4FDA451A6E44780099D309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4FDA461A6E44780099D309 /* SpringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringTests.swift; sourceTree = "<group>"; };
-		1A585F3F1A7B9530007EEB7D /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		1A585F3F1A7B9530007EEB7D /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		1A9F866C1A83C5640098BE6C /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		1AA7E1811AA36EFF00762D75 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		1AA7E1821AA36EFF00762D75 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
