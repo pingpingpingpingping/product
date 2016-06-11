@@ -233,7 +233,12 @@
 //}
 
 
-
+- (cv::Mat) loadMatFromFile:(NSString *)filename{
+    NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSString* path = [resourcePath stringByAppendingPathComponent:filename];
+    const char* pathChars = [path UTF8String];
+    return cv::imread(pathChars);
+}
 
 
 
