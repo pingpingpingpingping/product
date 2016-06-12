@@ -107,29 +107,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="STj-eQ-fw7">
-                                <rect key="frame" x="329" y="386" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon-free-sozai1-sample.png" id="kon-td-XvF">
+                                <rect key="frame" x="-2" y="276" width="199" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.98299480650000004" blue="0.56845808040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="送信"/>
-                                <connections>
-                                    <action selector="tapSend:" destination="hce-Wo-xKx" eventType="touchUpInside" id="7qu-Ow-aeM"/>
-                                </connections>
-                            </button>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="話しかけよう！" textAlignment="natural" minimumFontSize="17" id="0r3-4L-SAi">
-                                <rect key="frame" x="20" y="386" width="301" height="30"/>
+                                <rect key="frame" x="7" y="386" width="291" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おはなししよ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VTc-jb-WPC">
-                                <rect key="frame" x="20" y="286" width="243" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おはなししよ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VTc-jb-WPC">
+                                <rect key="frame" x="7" y="299" width="176" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="STj-eQ-fw7">
+                                <rect key="frame" x="301" y="382" width="67" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.98299480650000004" blue="0.56845808040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="send"/>
+                                <connections>
+                                    <action selector="tapSend:" destination="hce-Wo-xKx" eventType="touchUpInside" id="7qu-Ow-aeM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -163,6 +168,9 @@
             <point key="canvasLocation" x="53" y="-201"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balloon-free-sozai1-sample.png" width="460" height="341"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rvm-jb-pL7"/>
     </inferredMetricsTieBreakers>

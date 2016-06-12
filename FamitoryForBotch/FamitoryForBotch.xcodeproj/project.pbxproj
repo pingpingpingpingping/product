@@ -21,6 +21,9 @@
 		822564F31D0C6D6500311F6D /* parts in Resources */ = {isa = PBXBuildFile; fileRef = 822564F21D0C6D6500311F6D /* parts */; };
 		822A37E11D0C08DF002215EF /* CameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A37E01D0C08DF002215EF /* CameraUtil.swift */; };
 		822A37E31D0C4262002215EF /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A37E21D0C4262002215EF /* TalkViewController.swift */; };
+		8262BB941D0D35C2005912AB /* rsz_blueyellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8262BB931D0D35C2005912AB /* rsz_blueyellow.png */; };
+		8262BB961D0D36AF005912AB /* 吹き出し7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8262BB951D0D36AF005912AB /* 吹き出し7.png */; };
+		8262BB9A1D0D390F005912AB /* balloon-free-sozai1-sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 8262BB991D0D390F005912AB /* balloon-free-sozai1-sample.png */; };
 		E8EF7036B92A5E7703B5A0EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6473277120F0EF76E06AE4D4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		822564F21D0C6D6500311F6D /* parts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = parts; sourceTree = SOURCE_ROOT; };
 		822A37E01D0C08DF002215EF /* CameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUtil.swift; sourceTree = "<group>"; };
 		822A37E21D0C4262002215EF /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
+		8262BB931D0D35C2005912AB /* rsz_blueyellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_blueyellow.png; sourceTree = "<group>"; };
+		8262BB951D0D36AF005912AB /* 吹き出し7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "吹き出し7.png"; sourceTree = "<group>"; };
+		8262BB991D0D390F005912AB /* balloon-free-sozai1-sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balloon-free-sozai1-sample.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,9 @@
 		13993BFE1D0D2A7D00CA5712 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				8262BB991D0D390F005912AB /* balloon-free-sozai1-sample.png */,
+				8262BB951D0D36AF005912AB /* 吹き出し7.png */,
+				8262BB931D0D35C2005912AB /* rsz_blueyellow.png */,
 				13993BFF1D0D2BA900CA5712 /* blueYellow.png */,
 				13993BF11D0D2A5200CA5712 /* noEggLogoSkyBlue.png */,
 			);
@@ -291,11 +300,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				130005771D0BEBC7008EF193 /* Assets.xcassets in Resources */,
+				8262BB9A1D0D390F005912AB /* balloon-free-sozai1-sample.png in Resources */,
 				13993C001D0D2BA900CA5712 /* blueYellow.png in Resources */,
+				8262BB961D0D36AF005912AB /* 吹き出し7.png in Resources */,
 				130005751D0BEBC7008EF193 /* Main.storyboard in Resources */,
 				13993BF71D0D2A5200CA5712 /* noEggLogoSkyBlue.png in Resources */,
 				822564F31D0C6D6500311F6D /* parts in Resources */,
 				13993BFD1D0D2A5D00CA5712 /* LaunchScreen.storyboard in Resources */,
+				8262BB941D0D35C2005912AB /* rsz_blueyellow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

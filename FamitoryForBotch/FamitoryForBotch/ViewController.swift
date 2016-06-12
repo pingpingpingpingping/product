@@ -20,6 +20,8 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     @IBOutlet var b4: UIButton!;
     @IBOutlet var b5: UIButton!;
     
+    var p = 0
+    var tag: Int32 = 0
 //    let bList:Array = [UIButton][
 //        b1,b2,b3,b4,b5
 //    ]
@@ -178,7 +180,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!)
     {
         
-        var tag: Int32 = 0
+        
         
         if(b1!.touchInside){
             tag = 1;
@@ -194,7 +196,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         
         dispatch_sync(dispatch_get_main_queue(), {
             let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-            let obj_img :UIImage = self.detector.trimObject(image, aiueo: tag)
+            let obj_img :UIImage = self.detector.trimObject(image, aiueo: self.tag)
             //trimObject(image:image, aiueo:tag)
             self.image2 = obj_img
             self.imageView.image = obj_img
@@ -207,6 +209,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var conversation:Conversation = segue.destinationViewController as! Conversation
         conversation.characterImage = self.image2
+        conversation.p = self.tag
     }
 
 

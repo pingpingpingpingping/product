@@ -16,6 +16,9 @@ class Conversation: UIViewController {
     @IBOutlet var characterImage : UIImage?
     @IBOutlet var convImage: UIImageView! = UIImageView()
     @IBOutlet var sendButton: UIButton! = UIButton()
+    
+    var p: Int32 = 0
+    
     //APIのID
     let apiId: String = "52475953583451334f524d706c2f61665a39317462554f4a56564a4f4555697975456d624d2e446c586d30"
     //APIのURL
