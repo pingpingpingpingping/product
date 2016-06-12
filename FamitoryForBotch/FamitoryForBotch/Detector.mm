@@ -24,6 +24,10 @@
         eye = 2;
     }else if(eye_type == 3){
         eye = 3;
+    }else if(eye_type == 4){
+        eye = 4;
+    }else if(eye_type == 5){
+        eye = 5;
     }
     
     cv::Mat mat;
@@ -272,8 +276,8 @@
     NSString *file_eye5 = @"./parts/eye7.png";
     NSString *file_eye6 = @"./parts/eye8.png";
     NSString *file_eye78 = @"./parts/eye9.png";
-    NSString *file_eye9 = @"./parts/eye11.png";
-    NSString *file_eye10 = @"./parts/eye12.png";
+    NSString *file_eye10 = @"./parts/eye11.png";
+    NSString *file_eye9 = @"./parts/eye12.png";
     
     //eye1
     cv::Mat eye1 = [self loadMatFromFile:file_eye1];

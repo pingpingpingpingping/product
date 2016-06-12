@@ -178,7 +178,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     //TalkViewControllerに画像を渡すために、Sequeのやつをオーバーライド
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let convCon = segue.destinationViewController as! Conversation
+        _ = segue.destinationViewController as! Conversation
 //        convCon.charaImage = self.image2
     }
 
