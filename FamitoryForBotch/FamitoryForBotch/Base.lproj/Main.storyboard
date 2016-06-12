@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="MZO-Am-gGo">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vrz-C4-sjv">
+>>>>>>> kingOfMaster
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -69,10 +73,21 @@
             <point key="canvasLocation" x="53.066666666666663" y="-910.22000000000003"/>
         </scene>
         <!--Conversation-->
+<<<<<<< HEAD
         <scene sceneID="yVK-yO-mA0">
             <objects>
                 <viewController id="hce-Wo-xKx" customClass="Conversation" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDO-A0-dia">
+=======
+        <scene sceneID="waN-Kb-2CI">
+            <objects>
+                <viewController id="B6M-7C-Juo" customClass="Conversation" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Hu-MX-rAA"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEb-Wp-Rb7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gju-zi-tBT">
+>>>>>>> kingOfMaster
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -80,6 +95,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="STj-eQ-fw7">
                                 <rect key="frame" x="337" y="352" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,6 +115,25 @@
                                 <rect key="frame" x="20" y="20" width="128" height="324"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-yF-aQM">
+                                <rect key="frame" x="309" y="460" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.98299480650000004" blue="0.56845808040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="tapSend:" destination="B6M-7C-Juo" eventType="touchUpInside" id="xA7-4m-WJk"/>
+                                    <segue destination="Vrz-C4-sjv" kind="modal" id="hVg-MD-de7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="話しかけよう！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pn4-Oa-9U2">
+                                <rect key="frame" x="20" y="460" width="281" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お返事" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-Mk-HuX">
+                                <rect key="frame" x="20" y="20" width="139" height="208"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+>>>>>>> kingOfMaster
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -106,9 +141,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="characterView" destination="xyJ-E2-pCc" id="lcj-AY-Fv3"/>
                         <outlet property="input" destination="0r3-4L-SAi" id="YNs-Ia-A3q"/>
                         <outlet property="output" destination="VTc-jb-WPC" id="aBV-Wh-qxJ"/>
+=======
+                        <outlet property="characterView" destination="ngh-0d-9F9" id="6Bz-ar-Yeu"/>
+                        <outlet property="input" destination="pn4-Oa-9U2" id="c4K-qD-Jj3"/>
+                        <outlet property="output" destination="jw3-Mk-HuX" id="c8v-Ou-GaF"/>
+>>>>>>> kingOfMaster
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg2-hb-Bc8" userLabel="First Responder" sceneMemberID="firstResponder"/>

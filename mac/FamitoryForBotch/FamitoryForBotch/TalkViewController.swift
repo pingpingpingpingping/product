@@ -18,17 +18,26 @@ class TalkViewController: UIViewController {
     
     @IBOutlet weak var characterView: UIImageView!
     
+    
+    var tapLocation: CGPoint = CGPoint()
+    var tapLocation2: CGPoint = CGPoint()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        characterView = UIImageView(image:charaImage)
         // Do any additional setup after loading the view, typically from a nib.
-        
+        //self.characterView.multipleTouchEnabled = YES
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // タッチイベントを取得する
+        let touch = touches.first
+        // タップした座標を取得する
+        tapLocation = touch!.locationInView(self.view)
     }
     
 }

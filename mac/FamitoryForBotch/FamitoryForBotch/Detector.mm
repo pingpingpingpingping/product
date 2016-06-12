@@ -21,47 +21,31 @@
     UIImageToMat(image, mat);
     
     //このサイズにオベジェクトがある想定。トリミング
+    cv::Mat grayscale, binImg;
+    int thresh = 130;
+    cv::cvtColor(mat, grayscale, CV_BGR2GRAY);
+    cv::threshold(grayscale, binImg, thresh, 255, CV_THRESH_BINARY);
     
-    int margin_x = 10;
-    int margin_y = 10;
-    int size_x = 300;
-    int size_y = 300;
+    cv::Mat cut_img(mat.cols, mat.rows, mat.type());
+    cv::Mat cut_tmp(binImg.cols, binImg.rows, binImg.type());
     
-    cv::Mat cut_img = mat.clone();
-    
-    cv::Mat test(cut_img.cols, cut_img.rows, cut_img.type());
-    test = cut_img.clone();
-    
-    //グレースケール
-    cv::Mat grayImage,binImage;
-    cv::cvtColor(cut_img, grayImage, CV_BGR2GRAY);
-    
-    //cv::threshold(grayImage, binImage, 0.0, 255.0, CV_THRESH_BINARY_INV | CV_THRESH_OTSU);
-    cv::threshold(grayImage, binImage, 0.0, 255.0, CV_THRESH_BINARY | CV_THRESH_OTSU);
+    for(int y = 120; y<binImg.rows-210; y++){
+        for(int x=70; x<binImg.cols-70; x++){
+            cut_img.at<cv::Vec3b>(x,y) = mat.at<cv::Vec3b>(x,y);
+            //cut_tmp.at<uchar>(x,y) = binImg.at<uchar>(x,y);
+        }
+    }
     
     //輪郭の座標リスト
     std::vector< std::vector< cv::Point > > contours;
     std::vector<cv::Vec4i> hierarchy;
     
     //輪郭取得
-//    cv::findContours(binImage, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
-    cv::findContours(binImage, contours, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
-//    cv::findContours(binImage, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
-    
-    // 検出された輪郭線を緑で描画
     /*
-     for (auto contour = contours.begin(); contour != contours.end(); contour++){
-     cv::polylines(cut_img, *contour, true, cv::Scalar(0, 255, 0), 2);
-     }
-     */
-    
-    //輪郭の数
-    int roiCnt = 0;
-    
-    //輪郭のカウント
-    
-    //roi配列の用意
-    cv::Mat roi[100];
+    cv::findContours(cut_tmp, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
+    cv::Mat cut_tmp2(cut_tmp.cols, cut_tmp.rows, cut_tmp.type());
+    double max_area = 0.0;
+    int contour_num = 0;
     
     for (int i = 0; i < contours.size(); i++){
         
@@ -70,47 +54,35 @@
         std::vector< cv::Point > approx;
         
         //輪郭を直線近似する
-        cv::approxPolyDP(cv::Mat(contours[i]), approx, 0.01 * cv::arcLength(contours[i], true), true);
+        cv::approxPolyDP(cv::Mat(contours[i]), approx, 0.005 * cv::arcLength(contours[i], true), true);
         
         // 近似の面積が一定以上なら取得
         double area = cv::contourArea(approx);
         
-        if (area > 1000.0){
-            //     if (area > 1000.0 && area < 8000.0){
-            //青で囲む場合
-            //cv::polylines(cut_img, approx, true, cv::Scalar(255, 0, 0), 2);
-            std::stringstream sst;
-            sst << "area : " << area;
-            cv::putText(cut_img, sst.str(), approx[0], CV_FONT_HERSHEY_PLAIN, 1.0, cv::Scalar(0, 128, 0));
+        if (area > 1000.0 && area > max_area){
             
-            //輪郭に隣接する矩形の取得
-            cv::Rect brect = cv::boundingRect(cv::Mat(approx).reshape(2));
-            roi[roiCnt] = cv::Mat(cut_img, brect);
-            
-            //入力画像に表示する場合
-            //cv::drawContours(cut_img, contours, i, CV_RGB(0, 0, 255), 4);
-            
-            //表示
-            //cv::imshow("label" + std::to_string(roiCnt+1), roi[roiCnt]);
-            
-            roiCnt++;
-            
-            //念のため輪郭をカウント
-            if (roiCnt == 99)
-            {
-                break;
+            //cv::drawContours(cut_img, contours,i,cv::Scalar(0,255,0));
+            contour_num = i;
+            max_area = area;
             }
         }
-        
-        i++;
+    */
+    //cv::drawContours(cut_tmp2, contours,contour_num,cv::Scalar(255), CV_FILLED);
+    /*cv::Rect bRect = cv::boundingRect(contours[contour_num]);
+    cv::rectangle(cut_img, cv::Point(bRect.x,bRect.y), cv::Point((bRect.x + bRect.width), (bRect.y + bRect.width)), cv::Scalar(255), CV_FILLED);
+    */
+    /*
+    for(int y=0; y<cut_tmp2.rows; y++){
+        for(int x=0; x<cut_tmp2.cols; x++){
+            if(cut_tmp2.at<uchar>(y,x) == 255){
+                cut_img.at<cv::Vec3b>(y,x) = mat.at<cv::Vec3b>(y,x);
+            }
+        }
     }
+    */
     
-        cv::Mat addFace_img = [self addFace:cut_img];
+    cv::Mat addFace_img = [self addFace:cut_img];
     
-    std::cout<< "image " << grayImage.cols << " " << grayImage.rows << std::endl;
-    
-    //cv::Mat test(grayImage.cols, grayImage.rows, grayImage.type());
-    //test = grayImage;
     UIImage *resultImage = MatToUIImage(addFace_img);
     
     std::cout << resultImage.size.width;
@@ -130,15 +102,10 @@
 - (cv::Mat)addFace:(cv::Mat)mat{
     
     //output image
-    int margin_x = 40;
-    int margin_y = 40;
-    cv::Mat output(mat.cols + margin_x, mat.rows + margin_y, mat.type());
+    cv::Mat input = mat.clone();
+    cv::resize(input, input, cv::Size(200,300));
     
-    for(int y = 0; y < mat.rows; y++){
-        for(int x = 0; x < mat.cols; x++){
-            output.at<cv::Vec3b>(y + margin_y/2, x + margin_x/2) = mat.at<cv::Vec3b>(y,x);
-        }
-    }
+    cv::Mat output = mat.clone();
     
     //import filename
     NSString *file_lefteye = @"./parts/lefteye.png";
@@ -149,6 +116,7 @@
     NSString *file_righthand = @"./parts/righthand.png";
     NSString *file_leftfoot = @"./parts/leftfoot.png";
     NSString *file_rightfoot = @"./parts/rightfoot.png";
+    NSString *file_face =@"./parts/face.png";
     
     //left eye
     cv::Mat lefteye = [self loadMatFromFile:file_lefteye];
@@ -183,17 +151,31 @@
     cv::Mat rightfoot = [self loadMatFromFile:file_rightfoot];
     cv::resize(rightfoot, rightfoot, cv::Size(40,40));
     
+    //face
+    cv::Mat face = [self loadMatFromFile:file_face];
+    cv::resize(face, face, cv::Size(260,160));
+    
     //position of all parts
-    cv::Point pos_lefteye(50,0);
-    cv::Point pos_righteye(130,0);
-    cv::Point pos_nose(90,40);
-    cv::Point pos_mouse(60,70);
-    cv::Point pos_lefthand(0,120);
-    cv::Point pos_leftfoot(0,250);
-    cv::Point pos_righthand(175,120);
-    cv::Point pos_rightfoot(175, 250);
+    cv::Point pos_face(70,0);
+    cv::Point pos_lefteye(110,20);
+    cv::Point pos_righteye(250,20);
+    cv::Point pos_nose(180,60);
+    cv::Point pos_mouse(150,110);
+    cv::Point pos_lefthand(90,170);
+    cv::Point pos_leftfoot(90,280);
+    cv::Point pos_righthand(250,170);
+    cv::Point pos_rightfoot(250, 280);
     
     //place all parts
+    
+    //face
+    for(int y=0; y<face.rows; y++){
+        for(int x=0; x<face.cols; x++){
+            if(face.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
+                output.at<cv::Vec3b>(y+pos_face.y, x+pos_face.x) = face.at<cv::Vec3b>(y,x);
+            }
+        }
+    }
     
     //left eye
     for(int y=0; y<lefteye.rows; y++){
