@@ -13,6 +13,7 @@ class Conversation: UIViewController {
     
     @IBOutlet var output: UILabel! = UILabel()
     @IBOutlet var input: UITextField! = UITextField()
+    @IBOutlet var characterImage : UIImage?
     @IBOutlet var convImage: UIImageView! = UIImageView()
     @IBOutlet var sendButton: UIButton! = UIButton()
     //APIのID
@@ -39,6 +40,7 @@ class Conversation: UIViewController {
 //        self.view.bringSubviewToFront(convImage)
 //        self.view.addSubview(sendButton)
 //        self.view.bringSubviewToFront(sendButton)
+        self.convImage.image = self.characterImage
     }
     
     override func didReceiveMemoryWarning() {
