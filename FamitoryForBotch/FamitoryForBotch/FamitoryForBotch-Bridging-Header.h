@@ -8,6 +8,6 @@
 @interface Detector: NSObject
 
 // ここにメソッド
-- (UIImage *)trimObject:(UIImage *)image aiueo:(int)eye_type;
+- (UIImage *)trimObject:(UIImage *)image;
 
 @end

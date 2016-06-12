@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vrz-C4-sjv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfE-hd-3Jh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bfE-hd-3Jh" id="dvS-V5-XXE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="315"/>
+        </scene>
+        <!--Talk View Controller-->
+        <scene sceneID="6bU-IG-kKp">
+            <objects>
+                <viewController id="U9u-oL-q0M" customClass="TalkViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Htk-Of-7uA"/>
+                        <viewControllerLayoutGuide type="bottom" id="uhk-2K-Xvv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gn5-FG-TmL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3E4-LV-TSo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="characterView" destination="3E4-LV-TSo" id="qwR-PI-dIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1AV-7b-Yg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="315"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TxU-yt-oKJ">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="Vrz-C4-sjv" customClass="ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="agL-Ij-w3b"/>
+                        <viewControllerLayoutGuide type="bottom" id="wQk-GF-W8v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fVB-Yp-97I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Cy-jGm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="b2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-jj-Na3">
+                                <rect key="frame" x="125" y="482" width="125" height="185"/>
+                                <color key="backgroundColor" red="0.46576277160000001" green="1" blue="0.74178932929999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Happy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButton:" destination="Vrz-C4-sjv" eventType="touchUpInside" id="Qyn-PA-71l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="b1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klW-hU-VBr">
+                                <rect key="frame" x="0.0" y="482" width="125" height="185"/>
+                                <color key="backgroundColor" red="1" green="0.8240803484" blue="0.4153303492" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Angry">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B6M-7C-Juo" kind="modal" id="bfH-ne-wNX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="b3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krC-mK-XJN">
+                                <rect key="frame" x="250" y="482" width="125" height="185"/>
+                                <color key="backgroundColor" red="1" green="0.56767625160000001" blue="0.66271926640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Sad">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="b1" destination="klW-hU-VBr" id="Esc-6u-sA2"/>
+                        <outlet property="b2" destination="PfL-jj-Na3" id="LRN-6I-HGK"/>
+                        <outlet property="b3" destination="krC-mK-XJN" id="oP9-ed-gQU"/>
+                        <outlet property="button" destination="klW-hU-VBr" id="AJy-Me-3m8"/>
+                        <outlet property="imageView" destination="INC-Cy-jGm" id="pev-ck-bB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H21-Ui-LHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385.5" y="-515.5"/>
+        </scene>
+        <!--Conversation-->
+        <scene sceneID="waN-Kb-2CI">
+            <objects>
+                <viewController id="B6M-7C-Juo" customClass="Conversation" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Hu-MX-rAA"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEb-Wp-Rb7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gju-zi-tBT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-0d-9F9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-yF-aQM">
+                                <rect key="frame" x="309" y="460" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.98299480650000004" blue="0.56845808040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="tapSend:" destination="B6M-7C-Juo" eventType="touchUpInside" id="xA7-4m-WJk"/>
+                                    <segue destination="Vrz-C4-sjv" kind="modal" id="hVg-MD-de7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="話しかけよう！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pn4-Oa-9U2">
+                                <rect key="frame" x="20" y="460" width="281" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お返事" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-Mk-HuX">
+                                <rect key="frame" x="20" y="20" width="139" height="208"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="pn4-Oa-9U2" id="c4K-qD-Jj3"/>
+                        <outlet property="output" destination="jw3-Mk-HuX" id="c8v-Ou-GaF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otH-Qr-6ID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859.5" y="-515.5"/>
+        </scene>
+    </scenes>
+</document>

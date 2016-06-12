@@ -15,16 +15,7 @@
 @end
 @implementation Detector: NSObject
 
-- (UIImage *)trimObject:(UIImage *)image aiueo:(int)eye_type{
-    
-    int eye = 0;
-    if(eye_type == 1){
-        eye = 1;
-    }else if(eye_type == 2){
-        eye = 2;
-    }else if(eye_type == 3){
-        eye = 3;
-    }
+- (UIImage *)trimObject:(UIImage *)image{
     
     cv::Mat mat;
     UIImageToMat(image, mat);
@@ -38,10 +29,10 @@
     cv::Mat cut_img(mat.cols, mat.rows, mat.type());
     cv::Mat cut_tmp(binImg.cols, binImg.rows, binImg.type());
     
-    for(int y = 50; y<binImg.rows-100; y++){
+    for(int y = 120; y<binImg.rows-210; y++){
         for(int x=70; x<binImg.cols-70; x++){
             cut_img.at<cv::Vec3b>(x,y) = mat.at<cv::Vec3b>(x,y);
-            cut_tmp.at<uchar>(x,y) = binImg.at<uchar>(x,y);
+            //cut_tmp.at<uchar>(x,y) = binImg.at<uchar>(x,y);
         }
     }
     
@@ -50,11 +41,11 @@
     std::vector<cv::Vec4i> hierarchy;
     
     //輪郭取得
+    /*
     cv::findContours(cut_tmp, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
     cv::Mat cut_tmp2(cut_tmp.cols, cut_tmp.rows, cut_tmp.type());
     double max_area = 0.0;
-    int contour_num = -1;
-    UIImage *resultImage;
+    int contour_num = 0;
     
     for (int i = 0; i < contours.size(); i++){
         
@@ -73,30 +64,28 @@
             //cv::drawContours(cut_img, contours,i,cv::Scalar(0,255,0));
             contour_num = i;
             max_area = area;
+            }
+        }
+    */
+    //cv::drawContours(cut_tmp2, contours,contour_num,cv::Scalar(255), CV_FILLED);
+    /*cv::Rect bRect = cv::boundingRect(contours[contour_num]);
+    cv::rectangle(cut_img, cv::Point(bRect.x,bRect.y), cv::Point((bRect.x + bRect.width), (bRect.y + bRect.width)), cv::Scalar(255), CV_FILLED);
+    */
+    /*
+    for(int y=0; y<cut_tmp2.rows; y++){
+        for(int x=0; x<cut_tmp2.cols; x++){
+            if(cut_tmp2.at<uchar>(y,x) == 255){
+                cut_img.at<cv::Vec3b>(y,x) = mat.at<cv::Vec3b>(y,x);
+            }
         }
     }
-    cv::drawContours(cut_tmp2, contours,contour_num,cv::Scalar(255), CV_FILLED);
-    if (contour_num != -1){
-    cv::Rect bRect = cv::boundingRect(contours[contour_num]);
-    /*
-     for(int y=0; y<cut_tmp2.rows; y++){
-     for(int x=0; x<cut_tmp2.cols; x++){
-     if(cut_tmp2.at<uchar>(y,x) == 255){
-     cut_img.at<cv::Vec3b>(y,x) = mat.at<cv::Vec3b>(y,x);
-     }
-     }
-     }
-     */
+    */
     
-    //cv::Mat addFace_img = [self addFace:cut_img];
-    cv::Mat addFace_img = [self addFace2:mat:bRect:eye];
+    cv::Mat addFace_img = [self addFace:cut_img];
     
-    resultImage = MatToUIImage(addFace_img);
-
+    UIImage *resultImage = MatToUIImage(addFace_img);
+    
     std::cout << resultImage.size.width;
-    }else {
-            resultImage = MatToUIImage(mat);
-    }
     return resultImage;
     
 }
@@ -133,7 +122,7 @@
     cv::Mat lefteye = [self loadMatFromFile:file_lefteye];
     std::cout << "left eye " << lefteye.cols << " " << lefteye.rows << std::endl;
     cv::resize(lefteye, lefteye, cv::Size(40,40));
-    
+
     //right eye
     cv::Mat righteye = [self loadMatFromFile:file_righteye];
     cv::resize(righteye, righteye, cv::Size(40,40));
@@ -255,85 +244,6 @@
     
     return output;
 }
-
-- (cv::Mat)addFace2:(cv::Mat)mat: (cv::Rect)rect: (int)eye_type{
-    
-    //output image
-    cv::Mat input = mat.clone();
-    cv::resize(input, input, cv::Size(200,300));
-    
-    cv::Mat output = mat.clone();
-    
-    //import filename
-    NSString *file_eye1 = @"./parts/eye1.png";
-    NSString *file_eye2 = @"./parts/eye2.png";
-    NSString *file_eye3 = @"./parts/eye3.png";
-    NSString *file_eye4 = @"./parts/eye4.png";
-    NSString *file_eye5 = @"./parts/eye5.png";
-    NSString *file_eye6 = @"./parts/eye6.png";
-    
-    //eye1
-    cv::Mat eye1 = [self loadMatFromFile:file_eye1];
-    cv::resize(eye1, eye1, cv::Size(100,100));
-    
-    //eye2
-    cv::Mat eye2 = [self loadMatFromFile:file_eye2];
-    cv::resize(eye2, eye2, cv::Size(100,100));
-    
-    //eye3
-    cv::Mat eye3 = [self loadMatFromFile:file_eye3];
-    cv::resize(eye3, eye3, cv::Size(100,100));
-    
-    //eye4
-    cv::Mat eye4 = [self loadMatFromFile:file_eye4];
-    cv::resize(eye4, eye4, cv::Size(100,100));
-    
-    //eye5
-    cv::Mat eye5 = [self loadMatFromFile:file_eye5];
-    cv::resize(eye5, eye5, cv::Size(100,100));
-    
-    //eye6
-    cv::Mat eye6 = [self loadMatFromFile:file_eye6];
-    cv::resize(eye6, eye6, cv::Size(100,100));
-    
-    //place all parts
-    cv::Point lefteye_pos(rect.x, rect.y);
-    cv::Point righteye_pos(rect.width - rect.x, rect.y);
-    
-    //EYE
-    cv::Mat lefteye, righteye;
-    if(eye_type == 1){
-        lefteye = eye1;
-        righteye = eye2;
-    }else if(eye_type == 2){
-        lefteye = eye3;
-        righteye = eye4;
-    }else{
-        lefteye = eye5;
-        righteye = eye6;
-    }
-    
-    //left eye
-    for(int y=0; y<lefteye.rows; y++){
-        for(int x=0; x<lefteye.cols; x++){
-            if(lefteye.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
-                output.at<cv::Vec3b>(lefteye_pos.y + y, lefteye_pos.x + x) = lefteye.at<cv::Vec3b>(y,x);
-            }
-        }
-    }
-    
-    //right eye
-    for(int y=0; y<righteye.rows; y++){
-        for(int x=0; x<righteye.cols; x++){
-            if(righteye.at<cv::Vec3b>(y,x) != cv::Vec3b(0,0,0)){
-                output.at<cv::Vec3b>(righteye_pos.y + y, righteye_pos.x + x) = righteye.at<cv::Vec3b>(y,x);
-            }
-        }
-    }
-    
-    return output;
-}
-
 
 - (cv::Mat)createCharaOnPhotoImage:(UIImage*)image :(cv::Mat)mat{
     
