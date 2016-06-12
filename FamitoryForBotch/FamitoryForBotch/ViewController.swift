@@ -196,7 +196,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
             let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
             let obj_img :UIImage = self.detector.trimObject(image, aiueo: tag)
             //trimObject(image:image, aiueo:tag)
-            self.image2 = image
+            self.image2 = obj_img
             self.imageView.image = obj_img
             print("a")
         })
@@ -205,8 +205,8 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     //TalkViewControllerに画像を渡すために、Sequeのやつをオーバーライド
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        _ = segue.destinationViewController as! Conversation
-//        convCon.charaImage = self.image2
+        var conversation:Conversation = segue.destinationViewController as! Conversation
+        conversation.characterImage = self.image2
     }
 
 

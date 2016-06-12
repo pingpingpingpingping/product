@@ -11,9 +11,12 @@
       "scale" : "3x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "blueYellow120-1.png",
+=======
+      "size" : "40x40",
+>>>>>>> ec690e5addc5152385ab97783c156cda63f21e2d
       "scale" : "2x"
     },
     {
@@ -22,9 +25,12 @@
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
+<<<<<<< HEAD
       "filename" : "blueYellow120.png",
+=======
+      "size" : "60x60",
+>>>>>>> ec690e5addc5152385ab97783c156cda63f21e2d
       "scale" : "2x"
     },
     {
