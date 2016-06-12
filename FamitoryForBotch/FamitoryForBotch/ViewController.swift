@@ -23,7 +23,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     // 出力先
     var myOutput : AVCaptureVideoDataOutput!
     //画像の保存先
-    @IBOutlet var image2: UIImage?
+    var image2 : UIImage?
     
     let detector = Detector()
     
@@ -136,8 +136,6 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     {
         dispatch_sync(dispatch_get_main_queue(), {
             let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-            self.image2 = image;
-            self.imageView.image = image;
             let obj_img :UIImage = self.detector.trimObject(image)
             self.imageView.image = obj_img
             print("a")
@@ -147,46 +145,10 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     //TalkViewControllerに画像を渡すために、Sequeのやつをオーバーライド
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let talkViewContoroller = segue.destinationViewController as! TalkViewController
-//        talkViewContoroller.charaImage = self.image2
+        let talkViewContoroller = segue.destinationViewController as! TalkViewController
+        talkViewContoroller.charaImage = self.image2
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-        //タッチした位置の座標を取得
-        for touch: AnyObject in touches {
-            let point = touch.locationInView(self.view)
-            
-            
-            //座標獲得
-            let pointXY = (point.x,point.y)
-            
-            
-             //座標獲得、分けて書く場合
-             let pointX = point.x
-             let pointY = point.y
-            
-            
-            
-        }
-        
-    }
-    
-    
-    
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        //タッチ直後、画像がもどる
-    }
-    
-    
-    
-    
-    
-    //ステータスバー隠す
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
 
 
 }
