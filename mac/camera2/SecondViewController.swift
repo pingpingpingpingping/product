@@ -8,7 +8,10 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+protocol SecondViewControllerDelegate {
+    func modalDidFinished(modalText: String)
+}
+class SecondViewController: UIViewController{
 
     var capView: UIImageView!
     

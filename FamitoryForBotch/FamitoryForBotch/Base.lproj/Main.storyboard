@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vrz-C4-sjv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vrz-C4-sjv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -72,38 +72,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Cy-jGm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
                             </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-jj-Na3">
-                                <rect key="frame" x="83" y="484" width="75" height="52"/>
-                                <state key="normal" title="capture">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="b2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-jj-Na3">
+                                <rect key="frame" x="125" y="482" width="125" height="185"/>
+                                <color key="backgroundColor" red="0.46576277160000001" green="1" blue="0.74178932929999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Happy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tapButton:" destination="Vrz-C4-sjv" eventType="touchUpInside" id="Qyn-PA-71l"/>
-                                    <segue destination="B6M-7C-Juo" kind="modal" id="ac0-vh-GjN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eby-be-Qkd">
-                                <rect key="frame" x="158" y="467" width="75" height="128"/>
-                                <state key="normal" title="Nothing">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="b1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klW-hU-VBr">
+                                <rect key="frame" x="0.0" y="482" width="125" height="185"/>
+                                <color key="backgroundColor" red="1" green="0.8240803484" blue="0.4153303492" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Angry">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="B6M-7C-Juo" kind="modal" id="bfH-ne-wNX"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krC-mK-XJN">
-                                <rect key="frame" x="232" y="467" width="75" height="128"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="b3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krC-mK-XJN">
+                                <rect key="frame" x="250" y="482" width="125" height="185"/>
                                 <color key="backgroundColor" red="1" green="0.56767625160000001" blue="0.66271926640000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Nothing2">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvx-MU-35y">
-                                <rect key="frame" x="294" y="502" width="75" height="82"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klW-hU-VBr">
-                                <rect key="frame" x="0.0" y="504" width="75" height="54"/>
-                                <state key="normal" title="Modal">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Sad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -112,6 +107,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="b1" destination="klW-hU-VBr" id="Esc-6u-sA2"/>
+                        <outlet property="b2" destination="PfL-jj-Na3" id="LRN-6I-HGK"/>
+                        <outlet property="b3" destination="krC-mK-XJN" id="oP9-ed-gQU"/>
                         <outlet property="button" destination="klW-hU-VBr" id="AJy-Me-3m8"/>
                         <outlet property="imageView" destination="INC-Cy-jGm" id="pev-ck-bB6"/>
                     </connections>
@@ -159,7 +157,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="characterView" destination="ngh-0d-9F9" id="6Bz-ar-Yeu"/>
                         <outlet property="input" destination="pn4-Oa-9U2" id="c4K-qD-Jj3"/>
                         <outlet property="output" destination="jw3-Mk-HuX" id="c8v-Ou-GaF"/>
                     </connections>

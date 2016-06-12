@@ -10,7 +10,7 @@ import UIKit
 import GLKit
 import AVFoundation
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, SecondViewControllerDelegate
 {
     var videoDisplayView: GLKView!
     var videoDisplayViewRect: CGRect!
@@ -62,7 +62,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         shutter.setTitle("shutter", forState: .Normal)
         shutter.frame = CGRectMake(rect.width/2, (rect.height - videoDisplayView.frame.height)/2, rect.width/3, rect.height/10)
-        shutter.addTarget(self, action: Selector("tapped:"), forControlEvents:.TouchUpInside)
+        shutter.addTarget(self, action: Selector("shutterTapped:"), forControlEvents:.TouchUpInside)
 
         //ボタン追加
         self.view.addSubview(shutter)
