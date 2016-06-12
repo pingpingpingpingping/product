@@ -33,7 +33,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         //ボタンが押された時の処理
         //画像をDetector.mmに送り、物体を検出し顔を描画する。
 //        let characterImage : UIImage?
-          self.image2 = self.detector.trimObject(self.image2);
+        self.image2 = self.detector.trimObject(self.image2, aiueo:0);
     }
 
     override func viewDidLoad() {
@@ -136,9 +136,21 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     // 毎フレーム実行される処理
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!)
     {
+        
+        var tag: Int32 = 0
+        
+        if(b1!.touchInside){
+            tag = 1;
+        }else if(b2!.touchInside){
+            tag = 2;
+        }else if((b3?.touchInside) != nil){
+            tag = 3;
+        }
+        
         dispatch_sync(dispatch_get_main_queue(), {
             let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
-            let obj_img :UIImage = self.detector.trimObject(image)
+            let obj_img :UIImage = self.detector.trimObject(image, aiueo: tag)
+            //trimObject(image:image, aiueo:tag)
             self.imageView.image = obj_img
             print("a")
         })
