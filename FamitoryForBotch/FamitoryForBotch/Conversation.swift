@@ -11,9 +11,10 @@ import Alamofire
 
 class Conversation: UIViewController {
     
-    @IBOutlet weak var output: UILabel!
-    @IBOutlet weak var input: UITextField!
-    
+    @IBOutlet var output: UILabel! = UILabel()
+    @IBOutlet var input: UITextField! = UITextField()
+    @IBOutlet var convImage: UIImageView! = UIImageView()
+    @IBOutlet var sendButton: UIButton! = UIButton()
     //APIのID
     let apiId: String = "52475953583451334f524d706c2f61665a39317462554f4a56564a4f4555697975456d624d2e446c586d30"
     //APIのURL
@@ -29,6 +30,15 @@ class Conversation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.backgroundColor = UIColor.whiteColor()
+//        self.view.addSubview(output)
+//        self.view.bringSubviewToFront(output)
+//        self.view.addSubview(input)
+//        self.view.bringSubviewToFront(input)
+//        self.view.addSubview(convImage)
+//        self.view.bringSubviewToFront(convImage)
+//        self.view.addSubview(sendButton)
+//        self.view.bringSubviewToFront(sendButton)
     }
     
     override func didReceiveMemoryWarning() {
