@@ -17,6 +17,8 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     @IBOutlet weak var b1: UIButton?;
     @IBOutlet weak var b2: UIButton?;
     @IBOutlet weak var b3: UIButton?;
+    @IBOutlet weak var b4: UIButton?;
+    @IBOutlet weak var b5: UIButton?;
     
     // セッション
     var mySession : AVCaptureSession!
@@ -29,6 +31,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     let detector = Detector()
     
+    //capture取れた時用
     func tapingB1(sender: AnyObject) {
         //ボタンが押された時の処理
         //画像をDetector.mmに送り、物体を検出し顔を描画する。
@@ -39,6 +42,12 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         self.image2 = self.detector.trimObject(self.image2, aiueo:0);
     }
     func tapingB3(sender: AnyObject) {
+        self.image2 = self.detector.trimObject(self.image2, aiueo:0);
+    }
+    func tapingB4(sender: AnyObject) {
+        self.image2 = self.detector.trimObject(self.image2, aiueo:0);
+    }
+    func tapingB5(sender: AnyObject) {
         self.image2 = self.detector.trimObject(self.image2, aiueo:0);
     }
 
@@ -149,8 +158,12 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
             tag = 1;
         }else if(b2!.touchInside){
             tag = 2;
-        }else if((b3?.touchInside) != nil){
+        }else if(b3!.touchInside){
             tag = 3;
+        }else if(b4!.touchInside){
+            tag = 4;
+        }else if(b5!.touchInside){
+            tag = 5;
         }
         
         dispatch_sync(dispatch_get_main_queue(), {

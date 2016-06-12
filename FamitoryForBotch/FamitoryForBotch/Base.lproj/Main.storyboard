@@ -18,11 +18,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="b1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gAK-yw-brt">
-                                <rect key="frame" x="0.0" y="482" width="125" height="185"/>
+                                <rect key="frame" x="0.0" y="295" width="125" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.8240803484" blue="0.4153303492" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.55214418086586936" blue="0.39136613773727125" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Angry">
+                                <state key="normal" title="1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -30,11 +30,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="b2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MeO-iA-Xft">
-                                <rect key="frame" x="125" y="482" width="125" height="185"/>
+                                <rect key="frame" x="125" y="295" width="125" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.46576277160000001" green="1" blue="0.74178932929999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.95294117649999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Happy">
+                                <state key="normal" title="2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -42,15 +42,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="b3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="941-pV-eea">
-                                <rect key="frame" x="250" y="482" width="125" height="185"/>
+                                <rect key="frame" x="250" y="295" width="125" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.56767625160000001" blue="0.66271926640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.38682219872953555" green="0.96078431369999995" blue="0.5788241430873089" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Sad">
+                                <state key="normal" title="3">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="hce-Wo-xKx" kind="modal" id="t54-Lw-Lag"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="b4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g3r-h9-Joq">
+                                <rect key="frame" x="0.0" y="395" width="188" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.762868200199872" green="0.40189863392181219" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hce-Wo-xKx" kind="modal" id="qnB-hi-szr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="b5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7vr-lh-emu">
+                                <rect key="frame" x="188" y="395" width="188" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38090631051996432" green="0.90538743121037424" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hce-Wo-xKx" kind="modal" id="KKN-1F-6fl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,6 +85,8 @@
                         <outlet property="b1" destination="gAK-yw-brt" id="HsF-VF-1qc"/>
                         <outlet property="b2" destination="MeO-iA-Xft" id="tCN-Xv-8Lo"/>
                         <outlet property="b3" destination="941-pV-eea" id="Dco-Pq-hjl"/>
+                        <outlet property="b4" destination="g3r-h9-Joq" id="sPo-pg-MiD"/>
+                        <outlet property="b5" destination="7vr-lh-emu" id="rfA-q4-UO3"/>
                         <outlet property="imageView" destination="0gx-bQ-N2a" id="HhH-HP-O4n"/>
                     </connections>
                 </viewController>
@@ -113,10 +139,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg2-hb-Bc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="-855"/>
+            <point key="canvasLocation" x="687.5" y="-889.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tqP-Cv-2pn"/>
+        <segue reference="t54-Lw-Lag"/>
     </inferredMetricsTieBreakers>
 </document>

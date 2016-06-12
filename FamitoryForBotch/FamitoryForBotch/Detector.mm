@@ -269,8 +269,11 @@
     NSString *file_eye2 = @"./parts/eye2.png";
     NSString *file_eye3 = @"./parts/eye3.png";
     NSString *file_eye4 = @"./parts/eye4.png";
-    NSString *file_eye5 = @"./parts/eye5.png";
-    NSString *file_eye6 = @"./parts/eye6.png";
+    NSString *file_eye5 = @"./parts/eye7.png";
+    NSString *file_eye6 = @"./parts/eye8.png";
+    NSString *file_eye78 = @"./parts/eye9.png";
+    NSString *file_eye9 = @"./parts/eye11.png";
+    NSString *file_eye10 = @"./parts/eye12.png";
     
     //eye1
     cv::Mat eye1 = [self loadMatFromFile:file_eye1];
@@ -296,6 +299,19 @@
     cv::Mat eye6 = [self loadMatFromFile:file_eye6];
     cv::resize(eye6, eye6, cv::Size(100,100));
     
+    //eye78
+    cv::Mat eye78 = [self loadMatFromFile:file_eye78];
+    cv::resize(eye78, eye78, cv::Size(100,100));
+    
+    //eye9
+    cv::Mat eye9 = [self loadMatFromFile:file_eye9];
+    cv::resize(eye9, eye9, cv::Size(100,100));
+    
+    //eye10
+    cv::Mat eye10 = [self loadMatFromFile:file_eye10];
+    cv::resize(eye10, eye10, cv::Size(100,100));
+    
+    
     //place all parts
     cv::Point lefteye_pos(rect.x, rect.y);
     cv::Point righteye_pos(rect.width - rect.x, rect.y);
@@ -308,9 +324,15 @@
     }else if(eye_type == 2){
         lefteye = eye3;
         righteye = eye4;
-    }else{
+    }else if (eye_type == 3){
         lefteye = eye5;
         righteye = eye6;
+    }else if(eye_type == 4){
+        lefteye = eye78;
+        righteye = eye78;
+    }else if(eye_type == 5){
+        lefteye = eye9;
+        righteye = eye10;
     }
     
     //left eye
