@@ -109,8 +109,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="button" destination="klW-hU-VBr" id="AJy-Me-3m8"/>
-                        <outlet property="imageView" destination="INC-Cy-jGm" id="pev-ck-bB6"/>
+                        <outlet property="b1" destination="eby-be-Qkd" id="EUd-7r-Mmk"/>
+                        <outlet property="b2" destination="krC-mK-XJN" id="Hbf-WQ-gYd"/>
+                        <outlet property="b3" destination="cvx-MU-35y" id="dBo-VL-fyO"/>
+                        <outlet property="imageView" destination="INC-Cy-jGm" id="yzq-MX-uom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H21-Ui-LHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
