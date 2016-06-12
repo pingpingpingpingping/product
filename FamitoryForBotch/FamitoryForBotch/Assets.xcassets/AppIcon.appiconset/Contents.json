@@ -13,7 +13,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "noEggLogoSkyBlue-1.png",
+      "filename" : "blueYellow120-1.png",
       "scale" : "2x"
     },
     {
@@ -24,12 +24,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "noEggLogoSkyBlue.png",
+      "filename" : "blueYellow120.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "blueYellow120-2.png",
       "scale" : "3x"
     }
   ],
