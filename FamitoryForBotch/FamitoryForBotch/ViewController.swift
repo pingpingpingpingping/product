@@ -14,12 +14,15 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var b1: UIButton?;
-    @IBOutlet weak var b2: UIButton?;
-    @IBOutlet weak var b3: UIButton?;
-    @IBOutlet weak var b4: UIButton?;
-    @IBOutlet weak var b5: UIButton?;
+    @IBOutlet var b1: UIButton!;
+    @IBOutlet var b2: UIButton!;
+    @IBOutlet var b3: UIButton!;
+    @IBOutlet var b4: UIButton!;
+    @IBOutlet var b5: UIButton!;
     
+//    let bList:Array = [UIButton][
+//        b1,b2,b3,b4,b5
+//    ]
     // セッション
     var mySession : AVCaptureSession!
     // カメラデバイス
@@ -28,6 +31,9 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     var myOutput : AVCaptureVideoDataOutput!
     //画像の保存先
     var image2 : UIImage?
+    
+//    let convView = UIStoryboard(name: "ViewController", bundle:nil).instantiateViewControllerWithIdentifier("Conversaition") as UIViewController
+    let convView = Conversation()
     
     let detector = Detector()
     
@@ -59,7 +65,27 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
             // 撮影開始
             mySession.startRunning()
         }
+        
+        
+//        b1.addTarget(self, action: #selector(ViewController.modalStart(_:)), forControlEvents:.TouchUpInside)
+//        b2.addTarget(self, action: #selector(ViewController.modalStart(_:)), forControlEvents:.TouchUpInside)
+//        b3.addTarget(self, action: #selector(ViewController.modalStart(_:)), forControlEvents:.TouchUpInside)
+//        b4.addTarget(self, action: #selector(ViewController.modalStart(_:)), forControlEvents:.TouchUpInside)
+//        b5.addTarget(self, action: #selector(ViewController.modalStart(_:)), forControlEvents:.TouchUpInside)
 
+    }
+    func modalStart(sender: AnyObject?){
+        self.presentViewController(self.convView, animated: true, completion: nil)
+        convView.view.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.3)
+        convView.view.addSubview(convView.sendButton)
+    
+//        var nex : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("Conversation")
+//        self.presentViewController(nex as! UIViewController, animated: true, completion: nil)
+
+//        var nex = UIViewController()
+//        var selfStoryboard = self.storyboard
+//        nex = selfStoryboard!.instantiateViewControllerWithIdentifier("Conversation") as UIViewController
+//        self.presentViewController(nex, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -170,6 +196,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
             let image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
             let obj_img :UIImage = self.detector.trimObject(image, aiueo: tag)
             //trimObject(image:image, aiueo:tag)
+            self.image2 = image
             self.imageView.image = obj_img
             print("a")
         })

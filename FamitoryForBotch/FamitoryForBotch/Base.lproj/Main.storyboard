@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="MZO-Am-gGo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="uKX-Uq-4vN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="LA7-ur-qHu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="MZO-Am-gGo" customClass="ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MZO-Am-gGo" customClass="ViewController" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JO7-7k-nsm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hce-Wo-xKx" kind="modal" id="tqP-Cv-2pn"/>
+                                    <segue destination="hce-Wo-xKx" kind="push" id="z4L-hE-8C2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="b2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MeO-iA-Xft">
@@ -38,7 +38,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hce-Wo-xKx" kind="modal" id="KKH-VG-I6v"/>
+                                    <segue destination="hce-Wo-xKx" kind="push" id="1ZQ-9S-fet"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="b3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="941-pV-eea">
@@ -50,7 +50,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hce-Wo-xKx" kind="modal" id="t54-Lw-Lag"/>
+                                    <segue destination="hce-Wo-xKx" kind="push" id="Ggy-Tc-vAJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="b4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g3r-h9-Joq">
@@ -62,7 +62,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hce-Wo-xKx" kind="modal" id="qnB-hi-szr"/>
+                                    <segue destination="hce-Wo-xKx" kind="push" id="gHC-Nj-xRq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="b5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7vr-lh-emu">
@@ -74,35 +74,36 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hce-Wo-xKx" kind="modal" id="KKN-1F-6fl"/>
+                                    <segue destination="hce-Wo-xKx" kind="push" id="Rvm-jb-pL7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gn6-vm-GR9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="b1" destination="gAK-yw-brt" id="HsF-VF-1qc"/>
-                        <outlet property="b2" destination="MeO-iA-Xft" id="tCN-Xv-8Lo"/>
-                        <outlet property="b3" destination="941-pV-eea" id="Dco-Pq-hjl"/>
-                        <outlet property="b4" destination="g3r-h9-Joq" id="sPo-pg-MiD"/>
-                        <outlet property="b5" destination="7vr-lh-emu" id="rfA-q4-UO3"/>
-                        <outlet property="imageView" destination="0gx-bQ-N2a" id="HhH-HP-O4n"/>
+                        <outlet property="b1" destination="gAK-yw-brt" id="wB9-Nk-Vd7"/>
+                        <outlet property="b2" destination="MeO-iA-Xft" id="hQ4-82-cRA"/>
+                        <outlet property="b3" destination="941-pV-eea" id="m7k-lg-anL"/>
+                        <outlet property="b4" destination="g3r-h9-Joq" id="28O-Fa-nk7"/>
+                        <outlet property="b5" destination="7vr-lh-emu" id="mVi-Xh-SZA"/>
+                        <outlet property="imageView" destination="0gx-bQ-N2a" id="9EK-ev-DHC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4I-aL-QTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.066666666666663" y="-910.22000000000003"/>
+            <point key="canvasLocation" x="16.5" y="-902.5"/>
         </scene>
         <!--Conversation-->
         <scene sceneID="yVK-yO-mA0">
             <objects>
-                <viewController id="hce-Wo-xKx" customClass="Conversation" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Conversatioin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hce-Wo-xKx" customClass="Conversation" customModule="FamitoryForBotch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDO-A0-dia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xyJ-E2-pCc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="convImage" id="xyJ-E2-pCc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -121,7 +122,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VTc-jb-WPC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おはなししよ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VTc-jb-WPC">
                                 <rect key="frame" x="20" y="20" width="128" height="324"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -131,18 +132,37 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iHI-oy-HXN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="characterView" destination="xyJ-E2-pCc" id="lcj-AY-Fv3"/>
+                        <outlet property="convImage" destination="xyJ-E2-pCc" id="gds-Xq-WrD"/>
                         <outlet property="input" destination="0r3-4L-SAi" id="YNs-Ia-A3q"/>
                         <outlet property="output" destination="VTc-jb-WPC" id="aBV-Wh-qxJ"/>
+                        <outlet property="sendButton" destination="STj-eQ-fw7" id="LgN-oS-ycA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg2-hb-Bc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687.5" y="-889.5"/>
+            <point key="canvasLocation" x="550.5" y="-902.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OsO-6S-gjO">
+            <objects>
+                <navigationController id="uKX-Uq-4vN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1f-yP-kzB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MZO-Am-gGo" kind="relationship" relationship="rootViewController" id="DRX-HP-GTC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEW-qp-glz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="-201"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="t54-Lw-Lag"/>
+        <segue reference="Rvm-jb-pL7"/>
     </inferredMetricsTieBreakers>
 </document>
