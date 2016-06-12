@@ -29,10 +29,16 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     let detector = Detector()
     
-    @IBAction func tapButton(sender: AnyObject) {
+    func tapingB1(sender: AnyObject) {
         //ボタンが押された時の処理
         //画像をDetector.mmに送り、物体を検出し顔を描画する。
 //        let characterImage : UIImage?
+        self.image2 = self.detector.trimObject(self.image2, aiueo:0);
+    }
+    func tapingB2(sender: AnyObject) {
+        self.image2 = self.detector.trimObject(self.image2, aiueo:0);
+    }
+    func tapingB3(sender: AnyObject) {
         self.image2 = self.detector.trimObject(self.image2, aiueo:0);
     }
 
@@ -159,8 +165,8 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     //TalkViewControllerに画像を渡すために、Sequeのやつをオーバーライド
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let talkViewContoroller = segue.destinationViewController as! TalkViewController
-        talkViewContoroller.charaImage = self.image2
+        let convCon = segue.destinationViewController as! Conversation
+//        convCon.charaImage = self.image2
     }
 
 
