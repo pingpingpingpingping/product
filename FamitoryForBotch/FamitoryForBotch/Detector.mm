@@ -29,10 +29,10 @@
     cv::Mat cut_img(mat.cols, mat.rows, mat.type());
     cv::Mat cut_tmp(binImg.cols, binImg.rows, binImg.type());
     
-    for(int y = 50; y<binImg.rows-140; y++){
+    for(int y = 120; y<binImg.rows-210; y++){
         for(int x=70; x<binImg.cols-70; x++){
-            //cut_img.at<cv::Vec3b>(x,y) = mat.at<cv::Vec3b>(x,y);
-            cut_tmp.at<uchar>(x,y) = binImg.at<uchar>(x,y);
+            cut_img.at<cv::Vec3b>(x,y) = mat.at<cv::Vec3b>(x,y);
+            //cut_tmp.at<uchar>(x,y) = binImg.at<uchar>(x,y);
         }
     }
     
@@ -41,7 +41,7 @@
     std::vector<cv::Vec4i> hierarchy;
     
     //輪郭取得
-    
+    /*
     cv::findContours(cut_tmp, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
     cv::Mat cut_tmp2(cut_tmp.cols, cut_tmp.rows, cut_tmp.type());
     double max_area = 0.0;
@@ -66,11 +66,12 @@
             max_area = area;
             }
         }
-    
-    cv::drawContours(cut_tmp2, contours,contour_num,cv::Scalar(255), CV_FILLED);
-    cv::Rect bRect = cv::boundingRect(contours[contour_num]);
+    */
+    //cv::drawContours(cut_tmp2, contours,contour_num,cv::Scalar(255), CV_FILLED);
+    /*cv::Rect bRect = cv::boundingRect(contours[contour_num]);
     cv::rectangle(cut_img, cv::Point(bRect.x,bRect.y), cv::Point((bRect.x + bRect.width), (bRect.y + bRect.width)), cv::Scalar(255), CV_FILLED);
-    
+    */
+    /*
     for(int y=0; y<cut_tmp2.rows; y++){
         for(int x=0; x<cut_tmp2.cols; x++){
             if(cut_tmp2.at<uchar>(y,x) == 255){
@@ -78,11 +79,11 @@
             }
         }
     }
-    
+    */
     
     cv::Mat addFace_img = [self addFace:cut_img];
     
-    UIImage *resultImage = MatToUIImage(cut_img);
+    UIImage *resultImage = MatToUIImage(addFace_img);
     
     std::cout << resultImage.size.width;
     return resultImage;
@@ -150,19 +151,20 @@
     cv::Mat rightfoot = [self loadMatFromFile:file_rightfoot];
     cv::resize(rightfoot, rightfoot, cv::Size(40,40));
     
+    //face
     cv::Mat face = [self loadMatFromFile:file_face];
-    cv::resize(face, face, cv::Size(100,100));
+    cv::resize(face, face, cv::Size(260,160));
     
     //position of all parts
-    cv::Point pos_face(110,0);
+    cv::Point pos_face(70,0);
     cv::Point pos_lefteye(110,20);
     cv::Point pos_righteye(250,20);
     cv::Point pos_nose(180,60);
     cv::Point pos_mouse(150,110);
-    cv::Point pos_lefthand(40,170);
-    cv::Point pos_leftfoot(40,280);
-    cv::Point pos_righthand(300,170);
-    cv::Point pos_rightfoot(300, 280);
+    cv::Point pos_lefthand(90,170);
+    cv::Point pos_leftfoot(90,280);
+    cv::Point pos_righthand(250,170);
+    cv::Point pos_rightfoot(250, 280);
     
     //place all parts
     
